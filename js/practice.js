@@ -180,15 +180,16 @@ const plantNeedsWater = function(day) {
 console.log(plantNeedsWater('Tuesday'));
 
 //! Arrow functions or 'Fat Arrows' an ES6 introduction- a shorthand way to write a function () => {}
-
+// can take patameters but dont need to include them, you would simply use parentheses
 const usingArrowFunction = (param1, param2) => {
   return param1 + param2;
 }
 console.log(usingArrowFunction(5, 4));
 
 //! Concise body arrow function - a brief but comprehensive arrow function or 'single line' body arrow function
+// concise body arrow function can only take one parameter
 
-const concArrFunc = param => param * param; // no need for curly braces as it's a single parameter
+const concArrFunc = param => param * param;
 console.log(concArrFunc(2)); // a single argument for the single parameter
 
 // performing a conditional statement using a ternary operator
