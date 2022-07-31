@@ -197,8 +197,11 @@ const waterThePlant = day => day === 'Wednesday' ? `The plant needs watering on 
 console.log(waterThePlant('Wednesday'));
 
 //! SCOPE
-//? GLOBAL SCOPE - defining variables outside of a block of code so they can be used insidwe a block
+//? GLOBAL SCOPE - defining variables outside of a block of code so they can be used insidwe a block // USED ANYWHERE
+//? BLOCK SCOPE - if or switch conditions or inside for or while loops, are accessible within that particular condition or loop
+//? FUNCTION SCOPE - declared inside functions and are only accessible within the function and cannot be used outside of that function
 
+// GLOBAL SCOPE
 let satellite = 'The Moon';
 let galaxy = 'The Milky Way';
 let stars = 'North Star';
@@ -209,9 +212,7 @@ function callMyNightSky() {
 
 console.log(callMyNightSky());
 
-//? BLOCK SCOPE - local variables are variables declared inside a block of code
-// these are varaibles that are only available within the curly braces
-
+// FUNCTION SCOPE
 function logVisibleLightWaves() {
   const lightWaves = 'Moonlight';
   console.log(lightWaves);
@@ -229,6 +230,8 @@ console.log(lightWaves); // this will produce a console error as the variable wa
 const logVisibleLightWaves = () => {
   let lightWaves = "Moonlight";
   let region = "The Arctic";
+
+  // BLOCK SCOPE
   if (region === "The Arctic") {
     let lightWaves = "Northern Lights"; // updating the variable if the condition is true
     console.log(lightWaves);
