@@ -180,7 +180,7 @@ const plantNeedsWater = function(day) {
 console.log(plantNeedsWater('Tuesday'));
 
 //! Arrow functions or 'Fat Arrows' an ES6 introduction- a shorthand way to write a function () => {}
-// can take patameters but dont need to include them, you would simply use parentheses
+// can take patameters but dont need to include them, you would simply use empty parentheses
 const usingArrowFunction = (param1, param2) => {
   return param1 + param2;
 }
@@ -195,3 +195,46 @@ console.log(concArrFunc(2)); // a single argument for the single parameter
 // performing a conditional statement using a ternary operator
 const waterThePlant = day => day === 'Wednesday' ? `The plant needs watering on ${day}` : false;
 console.log(waterThePlant('Wednesday'));
+
+//! SCOPE
+//? GLOBAL SCOPE - defining variables outside of a block of code so they can be used insidwe a block
+
+let satellite = 'The Moon';
+let galaxy = 'The Milky Way';
+let stars = 'North Star';
+
+function callMyNightSky() {
+  return 'Night Sky: ' + satellite + ', ' + stars + ', and ' + galaxy;
+}
+
+console.log(callMyNightSky());
+
+//? BLOCK SCOPE - local variables are variables declared inside a block of code
+// these are varaibles that are only available within the curly braces
+
+function logVisibleLightWaves() {
+  const lightWaves = 'Moonlight';
+  console.log(lightWaves);
+}
+
+logVisibleLightWaves();
+console.log(lightWaves); // this will produce a console error as the variable was declared inside of the block
+
+//? SCOPE POLLUTION - declaring too many global variables in the global namespace that can be used a number of times across the program and have their values reassigned
+// try to avoid declaring global variables alltogether
+
+//? GOOD SCOPE PRACTICE
+// try to delcare all your variables inside of the block of code you wish to execute using them in
+
+const logVisibleLightWaves = () => {
+  let lightWaves = "Moonlight";
+  let region = "The Arctic";
+  if (region === "The Arctic") {
+    let lightWaves = "Northern Lights"; // updating the variable if the condition is true
+    console.log(lightWaves);
+  }
+  console.log(lightWaves); // otherwise the original value prints to the console
+};
+
+logVisibleLightWaves();
+
