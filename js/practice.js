@@ -4,31 +4,31 @@
 // console.log(Math.ceil(44.5)); // returns the smallest number greater than or equal to the decimal number
 // console.log(Number.isInteger(22)); // determines if a given number is an integer and returns true if so, passing in a floating point number would return false
 
-// function getMathNumber(max){
-//   return Math.random() * max;
-// }
-// console.log(getMathNumber(3));
+function getMathNumber(max){
+  return Math.random() * max;
+}
+console.log(getMathNumber(3));
 
 // //! Demonstrating length property
-// let example = 'This is a string';
-// let exampleResult = example.length; // length property determines how many characters are in the string
-// console.log(exampleResult);
+let example = 'This is a string';
+let exampleResult = example.length; // length property determines how many characters are in the string
+console.log(exampleResult);
 
 // //! string interpolation - using template literals to pass variables to strings
-// let string = 'string';
-// function getString(){
-//   return `This is an example of ${string} interpolation`;
-// }
+let string = 'string';
+function getString(){
+  return `This is an example of ${string} interpolation`;
+}
 // console.log(getString());
 
-//! CONDITIONAL STATEMENTS or 'binary decisions' */
+// //! CONDITIONAL STATEMENTS or 'binary decisions' */
 // you can't re-assign a value to a variable in it's block scope, the result would be no output
 // if/else statements
 // logical operators: > < >= <= !== ===
 // && to check two conditions both of which should be true
 // || OR OPERATOR, ! NOT (OR BANG) OPERATOR to check that one or the other condition must evaluate to true
 
-//! THE 5 FALSY VALUES */
+// //! THE 5 FALSY VALUES */
 // 0
 // "" or ''
 // null
@@ -50,74 +50,74 @@ if(car === 'Pontiac' && model === 'Express') {
   console.log(`${year || 1989} is the year this particular car was made.`);
 }
 
-// let number1 = 5;
-// let number2 = 10;
-// let number3 = 15;
-// let number4 = 20;
+let number1 = 5;
+let number2 = 10;
+let number3 = 15;
+let number4 = 20;
 
-// if(number1 !== 5 || number2 < 10) {
-//   console.log('This is the correct number');
-// } else if(number3 < 10 && number4 >= 20) {
-//   console.log('This is also the correct number');
-// } else if(number1 !== 5 && number2 !== 10) {
-//   console.log('All numbers are invalid');
-// } else if (number3 < 8 || number4 >= 22) {
-//   console.log('Complete');
-// } else {
-//   console.log('Completed');
-// }
+if(number1 !== 5 || number2 < 10) {
+  console.log('This is the correct number');
+} else if(number3 < 10 && number4 >= 20) {
+  console.log('This is also the correct number');
+} else if(number1 !== 5 && number2 !== 10) {
+  console.log('All numbers are invalid');
+} else if (number3 < 8 || number4 >= 22) {
+  console.log('Complete');
+} else {
+  console.log('Completed');
+}
 
-// //! Switch/Case statements
+//! Switch/Case statements
 
-// let number = 2022;
+let number = 2022;
 
-// // checking for the correct value NOT the condition
-// switch(number) {
-//   case 2021:
-//     console.log(`${number} is not the correct year here`);
-//     break;
-//   case 2023:
-//     console.log(`${number} is not the correct year here`);
-//     break;
-//   case 2025:
-//     console.log(`${number} is not the correct year here`);
-//     break;
-//   case 2026:
-//     console.log('This is the correct year');
-//     break;
-//   default:
-//     console.log("the end is near!");
-// }
+// checking for the correct value NOT the condition
+switch(number) {
+  case 2021:
+    console.log(`${number} is not the correct year here`);
+    break;
+  case 2023:
+    console.log(`${number} is not the correct year here`);
+    break;
+  case 2025:
+    console.log(`${number} is not the correct year here`);
+    break;
+  case 2026:
+    console.log('This is the correct year');
+    break;
+  default:
+    console.log("the end is near!");
+}
 
-// //! Short Circuit evaluations
+//! Short Circuit evaluations
 
-// let emptyString = '';
-// let updateString = emptyString || "Updated";
-// console.log(updateString);
+let emptyString = '';
+let updateString = emptyString || "Updated";
+console.log(updateString);
 
-// // assigning new object data using short circuit evaluation
-// var person = {
-//   name: 'Jack',
-//   age: 33,
-//   race: ''
-// }
+// assigning new object data using short circuit evaluation
+var person = {
+  name: 'Jack',
+  age: 33,
+  race: ''
+}
 
-// function raceInput(){
-//   var person = {
-//     name: 'Jack',
-//     age: 33,
-//     race: ''
-//   }
-//   return `${person.name} is ${person.age} years old and is considered to be ${person.race || 'White/British'}`
-// }
-// console.log(raceInput());
+function raceInput(){
+  var person = {
+    name: 'Jack',
+    age: 33,
+    race: ''
+  }
+  return `${person.name} is ${person.age} years old and is considered to be ${person.race || 'White/British'}`
+}
+console.log(raceInput());
 
-// //! Ternary Operators - a short hand if/else statement
+//! Ternary Operators - a short hand if/else statement
 
-// let firstName = 'Steve';
-// firstName === 'Paul' ? console.log(`${firstName} is correct`) : console.log(`The correct name is ${firstName}`);
+let firstName = 'Steve';
+firstName === 'Paul' ? console.log(`${firstName} is correct`) : console.log(`The correct name is ${firstName}`);
 
-//! Functions - parameters and arguments
+// //! Functions - parameters and arguments
 // A function is created by  assigning an identifier to it just like you would assign an identifier to an variable
 // Functions can be called as many times as you like
 // If you declare a variable inside a function that variable is then part of the function scope
@@ -138,7 +138,7 @@ function monitorCount(rows, columns) {
 const numOfMonitors = monitorCount(5, 4);
 console.log(numOfMonitors);
 
-//! Functions - default parameters
+// //! Functions - default parameters
 // default parameters can be useful when an argument isnt passed in to a function that's expecting an argument
 // adding a default parameter is useful if you dont have a pre-determined value for an argument
 function greeting(name = 'Default argument') {
@@ -149,7 +149,7 @@ greeting();
 // This argument can be updated as follows:
 greeting('Paul');
 
-//! Helper functions - return a value of a function inside of another function
+// //! Helper functions - return a value of a function inside of another function
 // using helper functions breaks down long code so it's easier to debug
 function monitorCount(rows, columns) {
   return rows * columns;
@@ -162,7 +162,7 @@ function costOfMonitors(rows, columns) {
 const totalCost = costOfMonitors(5, 4); // passing in two arguments for rows and columns which wil then get multiplied by 200 -  so 5 * 4 * 200
 console.log(totalCost);
 
-//! Function expressions - creating a variable and assigning an anonymous function to perform a task
+// //! Function expressions - creating a variable and assigning an anonymous function to perform a task
 // uses anonymous functions instead of declared functions
 const functionExpression = function(param1, param2) {
   const result = param1 * param2;
@@ -179,14 +179,14 @@ const plantNeedsWater = function(day) {
 }
 console.log(plantNeedsWater('Tuesday'));
 
-//! Arrow functions or 'Fat Arrows' an ES6 introduction- a shorthand way to write a function () => {}
+// //! Arrow functions or 'Fat Arrows' an ES6 introduction- a shorthand way to write a function () => {}
 // can take patameters but dont need to include them, you would simply use empty parentheses
 const usingArrowFunction = (param1, param2) => {
   return param1 + param2;
 }
 console.log(usingArrowFunction(5, 4));
 
-//! Concise body arrow function - a brief but comprehensive arrow function or 'single line' body arrow function
+// //! Concise body arrow function - a brief but comprehensive arrow function or 'single line' body arrow function
 // concise body arrow function can only take one parameter
 
 const concArrFunc = param => param * param;
@@ -196,10 +196,10 @@ console.log(concArrFunc(2)); // a single argument for the single parameter
 const waterThePlant = day => day === 'Wednesday' ? `The plant needs watering on ${day}` : false;
 console.log(waterThePlant('Wednesday'));
 
-//! SCOPE
-//? GLOBAL SCOPE - defining variables outside of a block of code so they can be used insidwe a block // USED ANYWHERE
-//? BLOCK SCOPE - if or switch conditions or inside for or while loops, are accessible within that particular condition or loop
-//? FUNCTION SCOPE - declared inside functions and are only accessible within the function and cannot be used outside of that function
+// //! SCOPE
+// //? GLOBAL SCOPE - defining variables outside of a block of code so they can be used insidwe a block // USED ANYWHERE
+// //? BLOCK SCOPE - if or switch conditions or inside for or while loops, are accessible within that particular condition or loop
+// //? FUNCTION SCOPE - declared inside functions and are only accessible within the function and cannot be used outside of that function
 
 // GLOBAL SCOPE
 let satellite = 'The Moon';
@@ -221,10 +221,10 @@ function logVisibleLightWaves() {
 logVisibleLightWaves();
 console.log(lightWaves); // this will produce a console error as the variable was declared inside of the block
 
-//? SCOPE POLLUTION - declaring too many global variables in the global namespace that can be used a number of times across the program and have their values reassigned
+// //? SCOPE POLLUTION - declaring too many global variables in the global namespace that can be used a number of times across the program and have their values reassigned
 // try to avoid declaring global variables alltogether
 
-//? GOOD SCOPE PRACTICE
+// //? GOOD SCOPE PRACTICE
 // try to delcare all your variables inside of the block of code you wish to execute using them in
 
 const logVisibleLightWaves = () => {
@@ -240,4 +240,26 @@ const logVisibleLightWaves = () => {
 };
 
 logVisibleLightWaves();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
