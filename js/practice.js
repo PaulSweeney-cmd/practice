@@ -275,8 +275,8 @@ console.log(utensils);
 // //? ARRAYS - push() - adding items to the end of the array
 
 let places = ['Lincoln', 'London', 'Leicester', 'Manchester'];
-places.push('Birmingham');
-console.log(places);
+let addPlaces = places.push('Birmingham');
+console.log(addPlaces);
 
 // //? ARRAYS - pop() - removing the last item from an array
 //* Doesn't need parameters
@@ -288,9 +288,9 @@ console.log(updatePlaces);
 // //? ARRAYS - unshift() - adding the first item from an array
 //* Doesn't need parameters
 let food = ['milk', 'bread', 'sugar', 'teabags', 'coffee'];
-let updateShopping = food.unshift('washing powder');
+let addShopping = food.unshift('washing powder');
 console.log(food);
-console.log(updateShopping);
+console.log(addShopping);
 
 // //? ARRAYS - shift() - removing the first item from an array
 //* Doesn't need parameters
@@ -395,6 +395,7 @@ while (currentCard !== 'spade') {
 //? DO...WHILE STATEMENTS - do a calulation etc while a number is less than another number (for example)
 // when you want to run your code at least once
 // to do a task once and then keep doing it until a specified condition is met
+// only checking the stopping condition after the first execution
 
 let cupsOfSugarNeeded = 3;
 let cupsAdded = 0;
@@ -414,7 +415,7 @@ for (let i = 0; i < rapperArray.length; i++) {
   console.log(rapperArray[i]); // prints all elements in the array
   if (rapperArray[i] === "Notorious B.I.G.") {
     break;
-  } // conditional statement to break the loop if the element at the current index is "Notorious B.I.G."
+  } // conditional statement to break the loop if the element at the current index is the specified element.
 }
 console.log("And if you don't know, now you know.");
 
