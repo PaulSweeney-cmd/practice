@@ -104,12 +104,14 @@ if (day === 'Monday') {
 const currentCity = 'Lincoln';
 switch (currentCity) {
   case 'Nottingham':
+  case 'Leicester':
     console.log(`${currentCity} is the correct location`);
     break;
   case 'London':
     console.log(`${currentCity} is the correct location`);
     break;
   case 'Lincoln':
+  case 'Gainsborough':
     console.log(`${currentCity} is the correct location`);
     break;
   case 'Edinburgh':
@@ -195,7 +197,7 @@ function callMyNightSky() {
 
 //? BLOCK SCOPE = variable declared inside of a conditional for, if, while, switch ...etc are available to that particular condition of loop
 
-const logVisibleLightWaves = () => {
+const logVisibleWaves = () => {
   let lightWaves = "Moonlight";
   let region = "The Arctic";
 
@@ -212,3 +214,134 @@ function logVisibleLightWaves() {
   const lightWaves = 'Moonlight';
   console.log(lightWaves);
 }
+
+//! Array literal
+// array elements are immutable
+//* create an array and index an element to print to the console
+
+const famArray = ['Paul', 'Alex', 'Mum', 'Josh', 'blank'];
+const showElement = famArray[3];
+console.log(showElement); // prints 'Josh'
+
+//* add a new element to the end of array 
+
+famArray.push('Roxy');
+
+//* updating an element
+
+famArray[4] = ('Billy'); // using () instead of [] tells the programme you're assigning a new element, not creating a new array
+console.log(famArray);
+
+let relatives = ['Blank', 'Blank', 'Blank', 'Blank', 'Blank', 'Blank'];
+console.log(relatives);
+
+//* assign a new array to an existing identifier
+//* identifier needs to be declard with the let keyword not const
+
+relatives = ['Doreen', 'Simon', 'Donna', 'Matt', 'Morgan'];
+console.log(relatives);
+
+// //? ARRAYS - push() - adding items to the end of the array
+
+let addAnotherRelative = relatives.push('blank');
+console.log(addAnotherRelative);
+
+//* updating an array element
+relatives[5] = ('Steven');
+console.log(relatives);
+
+//! ARRAYS - let & const
+// let = you can assign a new array and update an element
+// const = you cannot assign a new array but you can change the elements
+
+//? ARRAYS - pop() - removing the last item from an array
+
+function removeEndElement() {
+  const arrayZ = ['one', 'two', 'three', 'four'];
+  let wordOne = 'Paul';
+  let wordTwo = 'Sweeney';
+
+  if (wordOne === 'Paul' && wordTwo === 'Sweeney') {
+    arrayZ.pop();
+    console.log(arrayZ);
+  } else {
+    console.log('This didnt go right');
+  }
+}
+
+removeEndElement();
+
+//? ARRAYS - unshift() - adding the first item to an array
+
+function addCar() {
+  const carArray = ['Jaguar', 'MG', 'Atom', 'Lamborghini', 'Ferrari'];
+  const valOne = 450;
+
+  switch (valOne) {
+    case 400:
+      carArray.unshift('Focus');
+      console.log(carArray);
+      break;
+    case 345:
+      carArray.unshift('Beatle');
+      console.log(carArray);
+      break;
+    case 299:
+      carArray.unshift('Porsche');
+      console.log(carArray);
+      break;
+    case 450:
+      carArray.unshift('Metro');
+      console.log(carArray);
+      break;
+    default:
+      console.log('Adding element hasnt worked');
+  }
+}
+addCar();
+
+//? ARRAYS - shift() - removing the first item from an array
+
+function remove() {
+  const removingFirst = ['1', '2', '3', '4', '5'];
+  const a = 500;
+
+  if (a == 540) {
+    removingFirst.shift();
+    console.log(`The first check worked the numbers in the new array are ${removingFirst}`);
+  } else if (a != 500) {
+    removingFirst.shift();
+    console.log(`The second check worked the numbers in the new array are ${removingFirst}`);
+  } else if (a === 501 && a === 250) {
+    removingFirst.shift();
+    console.log(`The third check worked the numbers in the new array are ${removingFirst}`);
+  } else if (a === 500) {
+    removingFirst.shift();
+    console.log(`The fourth check worked the numbers in the new array are ${removingFirst}`);
+  } else {
+    console.log('Default');
+  }
+}
+remove();
+
+//? ARRAYS - slice() - returning a new array with your chosen elements
+//* use indexing to select elements, remembering to make sure you use the next index up to the last element you want
+
+const arraySlice = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'];
+console.log(arraySlice);
+const returningArray = arraySlice.slice(1, 8);
+console.log(returningArray);
+
+//? ARRAYS - indexOf() - finding the index value of an element
+
+const checkArrInd = function() {
+  const elemNum = ['Blue', 'Green', 'Yellow', 'White', 'Pink'];
+  if(elemNum.indexOf('Green') === 1){
+    console.log(`Correct the index element of ${elemNum[1]} is ${elemNum.indexOf('Green')}`)
+  } else {
+    console.log('Default');
+  }
+}
+checkArrInd();
+
+
