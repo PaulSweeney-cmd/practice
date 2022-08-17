@@ -75,8 +75,8 @@ console.log(personCondition());
 //! Write the 5 falsy values
 
 //* 1 - 0
-//* 2 - null
-//* 3 - Undefined
+//* 2 - null - value doesnt exist
+//* 3 - Undefined - variables that have not been assigned a value
 //* 4 - "" or ''
 //* 5 - NaN
 
@@ -149,7 +149,7 @@ const checkValue = dog === 'Roxy' ? console.log(`The dog's name is ${dog}`) : co
 // assigns a parameter with a default argument if you don't yet know what argument your'e passing in to the function
 
 const defaultParamFunc = (firstName = 'Steve', lastName = 'Johnson') => {
-  return `The first name has been updated to ${firstName} ${lastName}`;
+  return `The name has been updated to ${firstName} ${lastName}`;
 }
 const short = defaultParamFunc;
 console.log(short('Paul', 'Sweeney'));
@@ -170,8 +170,7 @@ function divideAddFunc(num1, num2) {
 // you can include additional math objects here
 console.log(divideAddFunc(100, 200));
 
-//! Function expressions
-//* creating a variable and assigning an anonymous function to perform a task
+//! Function expressions - assigning an anonymous function to a variable
 
 const createExpr = function(distance, time) {
   const calcJourney = distance / time;
@@ -179,8 +178,7 @@ const createExpr = function(distance, time) {
 }
 console.log(Math.floor(createExpr(950, 36)));
 
-//! Concise body function
-//* takes only one parameter, this doesn't need to be in paretheses
+//! Concise body function - single line function that takes one parameter
 
 const concBod = val3 => val3 / 100;
 console.log(concBod(350000));
@@ -207,6 +205,7 @@ const logVisibleWaves = () => {
   }
   console.log(lightWaves); // otherwise the original value prints to the console
 };
+logVisibleWaves();
 
 //? FUNCTION SCOPE = variables assigned inside of a function are only available within a function and cannot be used outside of that function << BEST PRACTICE! ALWAYS PLAY IT SAFE.
 
@@ -214,6 +213,7 @@ function logVisibleLightWaves() {
   const lightWaves = 'Moonlight';
   console.log(lightWaves);
 }
+logVisibleWaves();
 
 //! Array literal
 // array elements are immutable
@@ -337,11 +337,302 @@ console.log(returningArray);
 const checkArrInd = function() {
   const elemNum = ['Blue', 'Green', 'Yellow', 'White', 'Pink'];
   if(elemNum.indexOf('Green') === 1){
-    console.log(`Correct the index element of ${elemNum[1]} is ${elemNum.indexOf('Green')}`)
+    console.log(`Correct. The index element of ${elemNum[1]} is ${elemNum.indexOf('Green')}`)
   } else {
     console.log('Default');
   }
 }
 checkArrInd();
+
+//? ARRAYS and FUNCTIONS
+//* create a function with an array to update the last element
+
+function updateLastValue() {
+  const lastValArray = ['Bag', 'Shakes', 'Pen', 'Water bottle', 'Blank'];
+  lastValArray[4] = ('Car Keys');
+  return lastValArray;
+}
+
+console.log(updateLastValue());
+
+//? NESTED ARRAYS - storing an array inside of another array
+// use bracket notation to access certain elements inside of a nested array
+
+const numbers = [['1, 2'], ['3', '4'], ['5', '6'], ['7', '8'], ['9', '10']];
+const checkVal = numbers[4][1];
+console.log(checkVal);
+
+// use bracket notation to update elements
+
+numbers[4][1] = ('11');
+console.log(numbers);
+
+// add more elements to the end of a nested array
+const extendArray = numbers[4].push('12', '13');
+console.log(extendArray);
+
+// remove elements
+const deleteEnd = numbers[4].pop();
+console.log(deleteEnd);
+
+// return a new array with elements
+const retArr = numbers.slice(3, 4);
+console.log(retArr);
+
+
+//! FOR LOOPS - loops through until a stopping condition is met
+// iterator variable that appears in 3 expressions, iteration statement is used to update the iterator variable on each loop
+
+//* 1 - initialization (where to begin the loop) expression is the first expression to start the counter at 5
+//* 2 - stopping condition - loop runs as long as the number is between 5 and 10
+//* 3 - iteration statement (repeat) - value of each counter increases by 1, updatesd the iterator each time the loop is completed
+
+// for(let count = 5; count < 11; count++) {
+//   console.log(count);
+// }
+
+// // backwards for loop
+// for(let count = 10; count >= 0; count--){
+//   console.log(count);
+// }
+
+//? LOOPING THROUGH AN ARRAY
+
+function relativeLoop() {
+  const familyArray = ['Doreen', 'Simon', 'Donna', 'Matt', 'Morgan'];
+  for (let i = 0; i < familyArray.length; i++) {
+    console.log(`My family members name is ${familyArray[i]}`);
+  }
+}
+relativeLoop();
+
+//? NESTED FOR LOOPS - comparing elements in two arrays and pushing the identical elements to a new array
+// inner loop will run al its iterations for each iteration in the outer loop
+
+const colourArray = ['Red', 'Green', 'Blue', 'Yellow', 'Orange', 'Pink', 'Purple'];
+const shadeArray = ['Grey', 'Green', 'Cream', 'Pink', 'Purple'];
+const emptArr = [];
+
+/* if the comparion find the same elements in both arrays, 
+this code pushes those identical two elements to the emptArr array */
+
+for (let c = 0; c < colourArray.length; c++) {
+  for (let s = 0; s < shadeArray.length; s++) {
+    if (colourArray[c] === shadeArray[s]) {
+      emptArr.push(colourArray[c]);
+      console.log(emptArr);
+    }
+  }
+}
+
+//? DO...WHILE STATEMENTS
+// when you want to run your code at least once
+// to do a task once and then keep doing it until a specified condition is met
+// only checking the stopping condition after the first execution
+
+let cupsOfSugarNeeded = 3;
+let cupsAdded = 0;
+
+do {
+  cupsAdded++
+  console.log(cupsAdded + ' cup of sugar was added to the mix'); // prints 3 strings with values to the console
+} while (cupsAdded < cupsOfSugarNeeded)
+
+//? BREAK keyword
+// stops a loop from continuing even before the stopping condition is met
+// useful for looping through large data structures
+
+const rapperArray = ["Lil' Kim", "Jay-Z", "Notorious B.I.G.", "Tupac"];
+
+for (let i = 0; i < rapperArray.length; i++) {
+  console.log(rapperArray[i]); // prints all elements in the array
+  if (rapperArray[i] === "Notorious B.I.G.") {
+    break;
+  } // conditional statement to break the loop if the element at the current index is the specified element.
+}
+console.log("And if you don't know, now you know.");
+
+
+// ! ITERATORS - ABSTRACTION IN PROGRAMMING
+// allows you to write more modular code that is easier to read and de-bug 
+
+//? Functions as Data
+const reallyLongFunctionNameWithSomeFunctionality = () => {
+  return 'some code';
+}
+// assigning a function identifier as value to a variable, this is particularly handy for unneccessarily long identifiers.
+// this limits the amount of space needed for naming an identifier which can slow down a programme when the function is invoked.
+const newFunction = reallyLongFunctionNameWithSomeFunctionality;
+
+newFunction(); // invoking that function by using parentheses with the variable name that holds the function
+console.log(newFunction.name); // using the name property for example, this will print out the original identifier assigned to the function.
+
+//? WHILE LOOP - while a condition is true execute some code
+// the while loop creates a loop that is executed as long as a specified condition evaluates to true.
+// this will continue to run until the condition evaluates to false
+
+function incrementWord() {
+  let text = "";
+  let i = 0;
+  while (i < 10) {
+    text ||"<br>The number is " + i;
+    i++;
+  }
+}
+incrementWord();
+
+//? Functions as parameters - higher order functions
+// A higher-order function is a function that either accepts functions as parameters, returns a function, or both.
+
+function addTwo(num) {
+  return num + 2;
+}
+
+// a higher order function that adds to to an argument, in this case the argument is 10.
+const checkConsistentOutput = (func, val) => {
+  const checkA = val + 2;
+  const checkB = func(val);
+  if (checkA === checkB) {
+    return checkB;
+  } else {
+    return 'inconsistent results';
+  }
+}
+
+console.log(checkConsistentOutput(addTwo, 10)); // passing in the addTwo function as an argument
+
+const divideTwo = num => {
+  return num / 2;
+}
+
+const highFunc = (func, val) => {
+  const valA = val / 2;
+  const valB = func(val);
+  if(valA === valB){
+    return valB;
+  } else {
+    return 'No value';
+  }
+}
+
+console.log(highFunc(divideTwo, 10));
+
+//! ITERATORS - ABSTRACTION IN PROGRAMMING - ITERATION METHODS
+// allows you to write more modular code that is easier to read and de-bug
+
+//? .forEach() METHOD - for each element you want to execute a function to return a string for each element
+
+const dogArray = ['Retriver', 'Cocker', 'Pug', 'French Bulldog', 'Great Dane'];
+dogArray.forEach(function (dog) {
+  console.log(`I own a ${dog}`);
+})
+
+//? .map() METHOD - takes an argument of a callback function and returns a new array
+// similar to .forEach() method but instead it returns a new array
+
+const evens = [2, 4, 6, 8, 10, 12, 14];
+const doubleNum = evens.map(function (num) {
+  console.log(`The new numbers are ${num * 2}`)
+})
+
+//? .filter() METHOD - returns an array of filtered elements
+
+// create an array and filter all names that are not equal to 'Paul'
+
+const men = ['Steve', 'John', 'Chris', 'Paul', 'Johnny'];
+const blokes = men.filter(function(male) {
+  return male != 'Paul';
+})
+console.log(blokes);
+
+
+// filter through an array and return all words that have less that 6 characters
+const stuff = ['Bottle', 'Mouse', 'Chair', 'Ceiling', 'Trousers', 'Deodarent'];
+const belongings = stuff.filter(function(result){
+  return result.length < 6;
+})
+console.log(belongings);
+
+//? .findIndex() METHOD - return the index of the first element that evaluates to true in the callback function.
+
+const nature = ['Birds', 'Grass', 'Trees', 'Lake', 'Clouds'];
+const goodbye = nature.findIndex(function(update){
+  return update === 'Trees';
+})
+console.log(goodbye);
+
+// finding the index of the element that begins with s
+const clothes = ['Jeans', 'Tshirt', 'Shoes', 'Belt', 'Pants'];
+const outfit = clothes.findIndex(function(yo) {
+  return yo[0] === 'S';
+})
+
+console.log(outfit);
+
+//? .reduce() METHOD - reduces to a single value
+// returns a single value after iterating through the elements in an array
+// takes two parameters:
+  // the first parameter starts off as the value for the first element (1)
+  // the second parameter starts as the second element
+  // as the iteration progresses the first parameter becomes the value from the previous addition and the second becomes takes on the value for the current element in the looping process so ...
+
+const digits = [2, 4, 6, 8];
+const acc = digits.reduce((accumulator, currentValue) => {
+  console.log('The new values are ', accumulator);
+  return accumulator * currentValue;
+})
+console.log(acc);
+
+  // 1(cv)
+  // 1(acc) + 3(cv) = 4 
+  // 4(acc) + 5(cv) = 9
+  // 9(acc) + 7(cv) = 16
+
+const words = ['unique', 'uncanny', 'pique', 'oxymoron', 'guise'];
+// .some() method returns true if some words in the array are less that 6 characters
+console.log(words.some((letter) => {
+  return letter.length < 6;
+}))
+
+
+// .every() method returns true if every element in the array has more than 10 characters
+const wordss = ['hhhhhhhhhh', 'gggggggg', 'hh', 'yyyyy', 'jsj'];
+const erm = wordss.every((val) => {
+  return val.length > 10;
+})
+console.log(erm);
+
+
+const cities = ['Orlando', 'Dubai', 'Edinburgh', 'Chennai', 'Accra', 'Denver', 'Eskisehir', 'Medellin', 'Yokohama'];
+const nums = [1, 50, 75, 200, 350, 525, 1000];
+
+
+//  declaring a variable and assigning the forEach method will return undefined
+const test = cities.forEach(city => console.log('Have you visited ' + city + '?'));
+console.log(test);
+
+
+// Choose a method that will return a new array
+const longCities = cities.filter(city => city.length > 7);
+console.log(longCities);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
