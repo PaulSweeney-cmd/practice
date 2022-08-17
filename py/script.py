@@ -38,4 +38,5 @@ print(DAYS_WORKED)
 
 # ! Python Syntax - ARITHMATIC
 # ? Operators + / * -
-# ? MODULO OPERATOR (%) - returns a remainder after the division
+# ? MODULO OPERATOR (%) = returns a remainder after the division
+# ? **(to the power of) = 3 ** 4 is 3 multiplied by itself 4 times
