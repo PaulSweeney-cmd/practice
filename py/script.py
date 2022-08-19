@@ -1,4 +1,7 @@
-
+"""The old pond,
+A frog jumps in:
+Plop!
+"""
 # ! Python Syntax - PRINT STATEMENTS
 # ? allows the programme to have a conversation with the user
 # ? python-2 syntax print statements have no parentheses, in python-3 they do
@@ -40,3 +43,23 @@ print(DAYS_WORKED)
 # ? Operators + / * -
 # ? MODULO OPERATOR (%) = returns a remainder after the division
 # ? **(to the power of) = 3 ** 4 is 3 multiplied by itself 4 times
+
+# ! Python Syntax - NUMBERS
+# ? Variables can hold one of two numbers, FLOAT AND INTEGER
+# ? Floats can be declared by adding a decimal t the end of an integer too
+# ? You can define a float using scientific notation by adding e2:
+
+POWER_OF_TEN_FLOAT = 1.5e2  # * 1.5 to the power of 10 (e2) = 150
+print(POWER_OF_TEN_FLOAT)
+
+# ! Python Syntax - TWO TYPES OF DIVISION
+# ? you can divide numbers using conventional /
+# ? you can add a decimal if you were dividing uneven numbers to get a float:
+
+DIVIDE_FLOAT_ONE = 7/2
+print(DIVIDE_FLOAT_ONE)
+DIVIDE_FLOAT_TWO = 7/2.
+print(DIVIDE_FLOAT_TWO)
+
+QUOTIENT = float(10)/3
+print(QUOTIENT)
