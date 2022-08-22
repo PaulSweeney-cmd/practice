@@ -78,9 +78,10 @@ UPDATED_INTEGER_DATA_TYPE = int(INTEGER_DATA_TYPE)
 print(INTEGER_DATA_TYPE)
 
 # ? EXAMPLE - conveerting a floating point number to an integer
+# ? this will round the integer down to the number closer towards 0
 FLOAT_TO_INTEGER = 22.5
-UPDATED_FLOAT_TO_INTEGER = int(FLOAT_TO_INTEGER) # this will round the integer down to the number closer towards 0
-print(UPDATED_FLOAT_TO_INTEGER) # prints 22
+UPDATED_FLOAT_TO_INTEGER = int(FLOAT_TO_INTEGER)
+print(UPDATED_FLOAT_TO_INTEGER)  # prints 22
 
 # ? EXAMPLE - converting an integer to a string to combine with another string
 STRING_DATA_TYPE = 100
@@ -88,3 +89,32 @@ UPDATED_STRING_DATA_TYPE = str(STRING_DATA_TYPE)
 print(STRING_DATA_TYPE)
 
 # ? If you use int() on a float string value, it will raise a ValueError
+
+FLOAT_1 = 0.25
+FLOAT_2 = 40.0
+
+PRODUCT = float(FLOAT_1) * float(FLOAT_2)
+BIG_STRING = "The cost of the product was £" + str(PRODUCT) + "0"
+print(BIG_STRING)
+
+# ! Strings and console output - DATA AND TIME
+
+# importing a library to retrieve the current date & time
+from datetime import datetime
+
+# using the datetime.now function to retrieve the data
+NOW = datetime.now()
+print(NOW)
+
+# breaking down the data to what you need
+print(NOW.day)
+print(NOW.month)
+print(NOW.year)
+
+# placing the data in to placeholders in a string
+# ? 02d pads the day and month to two decimal places starting at 0
+# ? 04d pads the year to 4 plcaes
+# ? These decimal places can vary depending on what data you want to display
+print("%02d/%02d/%04d" % (NOW.day, NOW.month, NOW.year))
+
+# ! Conditionals and Control Flow -
