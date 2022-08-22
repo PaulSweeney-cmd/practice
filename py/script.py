@@ -63,3 +63,28 @@ print(DIVIDE_FLOAT_TWO)
 
 QUOTIENT = float(10/3)
 print(QUOTIENT)
+
+# ! Python Syntax - DATA CONVERSION
+# ? Methods to convert a data type are as follows
+
+# ? EXAMPLE - converting a string to use the value in an arithmatic operation
+FLOAT_DATA_TYPE = "2.1"
+UPDATED_DATA_TYPE = float(FLOAT_DATA_TYPE)
+print(FLOAT_DATA_TYPE)
+
+# ? EXAMPLE - converting a string to use the value in an arithmatic operation
+INTEGER_DATA_TYPE = "100"
+UPDATED_INTEGER_DATA_TYPE = int(INTEGER_DATA_TYPE)
+print(INTEGER_DATA_TYPE)
+
+# ? EXAMPLE - conveerting a floating point number to an integer
+FLOAT_TO_INTEGER = 22.5
+UPDATED_FLOAT_TO_INTEGER = int(FLOAT_TO_INTEGER) # this will round the integer down to the number closer towards 0
+print(UPDATED_FLOAT_TO_INTEGER) # prints 22
+
+# ? EXAMPLE - converting an integer to a string to combine with another string
+STRING_DATA_TYPE = 100
+UPDATED_STRING_DATA_TYPE = str(STRING_DATA_TYPE)
+print(STRING_DATA_TYPE)
+
+# ? If you use int() on a float string value, it will raise a ValueError
