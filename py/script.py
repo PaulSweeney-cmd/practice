@@ -117,4 +117,24 @@ print(NOW.year)
 # ? These decimal places can vary depending on what data you want to display
 print("%02d/%02d/%04d" % (NOW.day, NOW.month, NOW.year))
 
-# ! Conditionals and Control Flow -
+# ! Conditionals and Control Flow - Truthy or Falsy
+# ? Conditionals and control flow is to access the outcome of a condition
+
+# ! Conditionals and Control Flow - Boolean operators
+# ? AND = checks if both statements are true - gets evaluated next
+# ? OR = checks if at least one of the statements is true - gets evaluated last
+# ? NOT = gives the opposite condition of the statement - gets evaluated first
+
+# * not False  # returns True
+# * True and not True  # returns False
+# * False or not False  # returns True
+
+# ! Conditionals and Control Flow - Conditional statements
+
+VALUE_ONE = 10
+VALUE_TWO = 'Hello'
+
+if VALUE_ONE == 10 or VALUE_TWO == 'Hello':
+    print('Good job')
+else:
+    print('Bad job!')
