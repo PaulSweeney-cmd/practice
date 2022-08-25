@@ -121,9 +121,10 @@ print("%02d/%02d/%04d" % (NOW.day, NOW.month, NOW.year))
 # ? Conditionals and control flow is to access the outcome of a condition
 
 # ! Conditionals and Control Flow - Boolean operators
+# ? NOT = gives the opposite condition of the statement - gets evaluated first
 # ? AND = checks if both statements are true - gets evaluated next
 # ? OR = checks if at least one of the statements is true - gets evaluated last
-# ? NOT = gives the opposite condition of the statement - gets evaluated first
+
 
 # * not False  # returns True
 # * True and not True  # returns False
@@ -138,3 +139,73 @@ if VALUE_ONE == 10 or VALUE_TWO == 'Hello':
     print('Good job')
 else:
     print('Bad job!')
+
+
+# ? using a conditional stement in a function
+
+
+def stating_true():
+    '''a function to return a truthy result'''
+    if 22 - 10 == 12:
+        print('This is true')
+    else:
+        print('This un-true')
+
+
+def stating_true_again():
+    '''a function to return a truthy result'''
+    if 10 % 3 == 1:
+        print('This is also true')
+    else:
+        print('This is also un-true')
+
+
+stating_true()
+stating_true_again()
+
+
+def func_with_args(result):
+    '''a function with params and args'''
+    if result > 10:
+        print('This is the first number')
+    elif result > 12:
+        print('This is the second answer')
+    else:
+        print('There was no result')
+
+
+func_with_args(10)
+
+# ! PygLatin - input('a string')
+# ? input accepts a string, prints it and then waits for the user to type
+
+
+def users_input():
+    '''a function to allow a user to enter a name'''
+    enter_a_string = input('Hello, please enter your name: ')
+    if len(enter_a_string) > 0:
+        print('Paul')
+    else:
+        print('No name entered')
+
+
+users_input()
+
+# ! PygLatin - .isalpha()
+# ? .isalpha checks whether a given string contains alphabetic characters only
+
+
+def check_alpha_character():
+    '''a function to check alphabetic characters in a string'''
+    new_string = input('Hello, please enter your location: ')
+    if len(new_string) > 0 and new_string.isalpha():
+        print('Lincoln')
+    else:
+        print('No result found')
+
+
+check_alpha_character()
+
+# ! PygLatin - translating to Pig Latin
+# ? Rules for translation - move the first letter of the word to the end
+# ? Rules for translation - you then add the ay suffix to the end
