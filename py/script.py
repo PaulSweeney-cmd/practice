@@ -191,20 +191,33 @@ def users_input():
 
 users_input()
 
-# ! PygLatin - .isalpha()
-# ? .isalpha checks whether a given string contains alphabetic characters only
+# # ! PygLatin - .isalpha()
+# # ? .isalpha checks whether a given string contains alphabetic characters only
 
 
 def check_alpha_character():
     '''a function to check alphabetic characters in a string'''
     new_string = input('Hello, please enter your location: ')
+    new_location = new_string
     if len(new_string) > 0 and new_string.isalpha():
-        print('Lincoln')
+        print('Your location is ' + new_location)
     else:
         print('No result found')
 
 
 check_alpha_character()
+
+NEW_INPUT = input('Hello, please enter your name: ')
+NEW_LOCATION = input('Please enter your location: ')
+
+if len(NEW_INPUT) > 0:
+    # using index notation to slice the first letter off each word
+    NAME = NEW_INPUT[1:len(NEW_INPUT)]
+    CITY = NEW_LOCATION[1:len(NEW_LOCATION)]
+    print('Your name is, ' + NAME + ' and you\'re from ' + CITY + '.')
+else:
+    print('Not found.')
+
 
 # ! PygLatin - translating to Pig Latin
 # ? Rules for translation - move the first letter of the word to the end
