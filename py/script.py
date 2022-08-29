@@ -98,7 +98,7 @@ print(BIG_STRING)
 # ! Strings and console output - DATA AND TIME
 
 # importing a library to retrieve the current date & time
-# ? from datetime import datetime
+# * from datetime import datetime
 
 # using the datetime.now function to retrieve the data
 NOW = datetime.now()
