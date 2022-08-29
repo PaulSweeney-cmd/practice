@@ -1,4 +1,8 @@
+''' importing a module '''
 from datetime import datetime
+import math
+# ? a module contains definitions which includes variables and functions
+
 
 # ! Python Syntax - PRINT STATEMENTS
 # ? allows the programme to have a conversation with the user
@@ -44,7 +48,7 @@ print(DAYS_WORKED)
 
 # ! Python Syntax - NUMBERS
 # ? Variables can hold one of two numbers, FLOAT AND INTEGER
-# ? Floats can be declared by adding a decimal t the end of an integer too
+# ? Floats can be declared by adding a decimal to the end of an integer
 # ? You can define a float using scientific notation by adding e2:
 
 POWER_OF_TEN_FLOAT = 1.5e2  # * 1.5 to the power of 10 (e2) = 150
@@ -241,7 +245,7 @@ def power(base, exponent):
 power(37, 4)
 
 
-# ! Functions - Functions calling functions
+# ! Functions - FUNCTIONS CALLING FUNCTIONS
 
 def one_good_turn(number):
     ''' Adds 1 to the argument in the function call '''
@@ -279,3 +283,9 @@ def by_three(number):
 
 
 print(by_three(30))  # prints 27000 / 30 * 30 * 30
+
+# ! Functions - MODULE IMPORTS
+
+# ? Using the sqrt (square root) function from the math module
+# import math
+print(math.sqrt(25))
