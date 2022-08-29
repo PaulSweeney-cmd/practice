@@ -1,7 +1,5 @@
-"""The old pond,
-A frog jumps in:
-Plop!
-"""
+from datetime import datetime
+
 # ! Python Syntax - PRINT STATEMENTS
 # ? allows the programme to have a conversation with the user
 # ? python-2 syntax print statements have no parentheses, in python-3 they do
@@ -100,7 +98,7 @@ print(BIG_STRING)
 # ! Strings and console output - DATA AND TIME
 
 # importing a library to retrieve the current date & time
-from datetime import datetime
+# ? from datetime import datetime
 
 # using the datetime.now function to retrieve the data
 NOW = datetime.now()
@@ -115,7 +113,9 @@ print(NOW.year)
 # ? 02d pads the day and month to two decimal places starting at 0
 # ? 04d pads the year to 4 plcaes
 # ? These decimal places can vary depending on what data you want to display
-print("%02d/%02d/%04d" % (NOW.day, NOW.month, NOW.year))
+
+JLS_EXTRACT_VAR = "%02d/%02d/%04d"
+print(JLS_EXTRACT_VAR % (NOW.day, NOW.month, NOW.year))
 
 # ! Conditionals and Control Flow - Truthy or Falsy
 # ? Conditionals and control flow is to access the outcome of a condition
@@ -180,45 +180,102 @@ func_with_args(10)
 # ? input accepts a string, prints it and then waits for the user to type
 
 
-def users_input():
-    '''a function to allow a user to enter a name'''
-    enter_a_string = input('Hello, please enter your name: ')
-    if len(enter_a_string) > 0:
-        print('Paul')
-    else:
-        print('No name entered')
+# def users_input():
+#     '''a function to allow a user to enter a name'''
+#     enter_a_string = input('Hello, please enter your name: ')
+#     if len(enter_a_string) > 0:
+#         print('Paul')
+#     else:
+#         print('No name entered')
 
 
-users_input()
+# users_input()
 
-# # ! PygLatin - .isalpha()
-# # ? .isalpha checks whether a given string contains alphabetic characters only
-
-
-def check_alpha_character():
-    '''a function to check alphabetic characters in a string'''
-    new_string = input('Hello, please enter your location: ')
-    new_location = new_string
-    if len(new_string) > 0 and new_string.isalpha():
-        print('Your location is ' + new_location)
-    else:
-        print('No result found')
+# ! PygLatin - .isalpha()
+# ? .isalpha checks whether a given string contains alphabetic characters
 
 
-check_alpha_character()
+# def check_alpha_character():
+#     '''a function to check alphabetic characters in a string'''
+#     new_string = input('Hello, please enter your location: ')
+#     new_location = new_string
+#     if len(new_string) > 0 and new_string.isalpha():
+#         print('Your location is ' + new_location)
+#     else:
+#         print('No result found')
 
-NEW_INPUT = input('Hello, please enter your name: ')
-NEW_LOCATION = input('Please enter your location: ')
 
-if len(NEW_INPUT) > 0:
-    # using index notation to slice the first letter off each word
-    NAME = NEW_INPUT[1:len(NEW_INPUT)]
-    CITY = NEW_LOCATION[1:len(NEW_LOCATION)]
-    print('Your name is, ' + NAME + ' and you\'re from ' + CITY + '.')
-else:
-    print('Not found.')
+# check_alpha_character()
+
+# NEW_INPUT = input('Hello, please enter your name: ')
+# NEW_LOCATION = input('Please enter your location: ')
+
+# if len(NEW_INPUT) > 0:
+#     # using index notation to slice the first letter off each word
+#     NAME = NEW_INPUT[1:len(NEW_INPUT)]
+#     CITY = NEW_LOCATION[1:len(NEW_LOCATION)]
+#     print('Your name is, ' + NAME + ' and you\'re from ' + CITY + '.')
+# else:
+#     print('Not found.')
 
 
 # ! PygLatin - translating to Pig Latin
 # ? Rules for translation - move the first letter of the word to the end
 # ? Rules for translation - you then add the ay suffix to the end
+
+
+# ! Functions - Params & Args
+# ? Can accept parameters and argumants
+# ? Parameters are placeholders for arguments
+# ? Inputs (or 'values') in to the functions are arguments
+
+JLS_EXTRACT_VAR = "%d to the power of %d is %d."
+
+
+def power(base, exponent):
+    ''' A function to calculate the power '''
+    result = base ** exponent
+    print(JLS_EXTRACT_VAR % (base, exponent, result))
+
+
+power(37, 4)
+
+
+# ! Functions - Functions calling functions
+
+def one_good_turn(number):
+    ''' Adds 1 to the argument in the function call '''
+    return number + 1
+
+
+print(one_good_turn(25))
+
+
+def deserves_another(number):
+    ''' Calls the first function and carries
+      on the calculation '''
+    return one_good_turn(number) + 2
+
+
+print(deserves_another(25))
+
+
+def cube(number):
+    ''' calculating 10 to the power of 3 '''
+    return number ** 3
+
+
+print(cube(10))  # prints 1000 / 10 * 10 * 10
+
+
+def by_three(number):
+    ''' passing in first function to produce a
+    result based on outcome of conditional
+    statement '''
+    if number % 3 == 0:
+        return cube(number)
+    else:
+        return False
+
+
+print(by_three(30))  # prints 27000 / 30 * 30 * 30
