@@ -1,7 +1,9 @@
 ''' importing a module '''
 from datetime import datetime
 import math
-# ? a module contains definitions which includes variables and functions
+from math import sqrt
+from math import *
+
 
 
 # ! Python Syntax - PRINT STATEMENTS
@@ -247,12 +249,14 @@ power(37, 4)
 
 # ! Functions - FUNCTIONS CALLING FUNCTIONS
 
+# * --------------------------------EXAMPLE ONE
+
 def one_good_turn(number):
     ''' Adds 1 to the argument in the function call '''
     return number + 1
 
 
-print(one_good_turn(25))
+print(one_good_turn(25))  # prints 26
 
 
 def deserves_another(number):
@@ -261,7 +265,9 @@ def deserves_another(number):
     return one_good_turn(number) + 2
 
 
-print(deserves_another(25))
+print(deserves_another(25))  # prints 28
+
+# * --------------------------------EXAMPLE TWO
 
 
 def cube(number):
@@ -284,8 +290,42 @@ def by_three(number):
 
 print(by_three(30))  # prints 27000 / 30 * 30 * 30
 
-# ! Functions - MODULE IMPORTS
-
+# ! Functions - MODULE IMPORTS (import math)
+# ? A module (a file) contains definitions that include variables and functions
 # ? Using the sqrt (square root) function from the math module
-# import math < importing the math module
+
 print(math.sqrt(25))
+
+# ! Functions - FUNCTION IMPORTS (from math import sqrt)
+# ? pulling a singe function from a module is called a function import
+
+# ! Functions - UNIVERSAL IMPORT (from math import *)
+
+# ? A universal import is importing everything from a module
+# ? this can be dangerous as everything gets imported and takes up space
+# ? You may not need everything so just be specific on what you want to use
+# ? This may lead to two functions with the same name and cause conflict
+
+# ! Functions - BUILT IN FUNCTIONS
+# ? Built in functions don't need importing
+
+# - max() = returns the largest number
+MAXIMUM = max(550, 456, 13456, 77)
+print(MAXIMUM)
+
+# - min() = returns the smallest number
+MINIMUM = min(45, 657, 3, -1, 44)
+print(MINIMUM)
+
+# - abs() = returns the absolute value of a number
+# - Takes only one argument
+# - Takes the numbers distnce from zero
+# - Always returns a positive value
+ABSOLUTE = abs(-55)
+print(ABSOLUTE)  # prints 55
+
+# - type() = returns the type of data
+
+print(type('hello'))  # <class 'str'>
+print(type(44))  # <class 'int'>
+print(type(10.5))  # <class 'float'>
