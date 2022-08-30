@@ -287,5 +287,5 @@ print(by_three(30))  # prints 27000 / 30 * 30 * 30
 # ! Functions - MODULE IMPORTS
 
 # ? Using the sqrt (square root) function from the math module
-# import math
+# import math < importing the math module
 print(math.sqrt(25))
