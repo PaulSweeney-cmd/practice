@@ -362,7 +362,8 @@ print(plane_ride_cost('Tampa'))
 def rental_car_cost(days):
     '''
     Calculate the cost based on number of days the
-    car is rented for and apply discounts
+    car is rented for and apply discounts if days
+    are exceeded
     '''
     total = 40 * days
     if days >= 7:
