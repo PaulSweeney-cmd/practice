@@ -1,9 +1,8 @@
 ''' importing a module '''
 from datetime import datetime
 import math
-from math import sqrt
-from math import *
-
+# from math import sqrt
+# from math import *
 
 
 # ! Python Syntax - PRINT STATEMENTS
@@ -329,3 +328,62 @@ print(ABSOLUTE)  # prints 55
 print(type('hello'))  # <class 'str'>
 print(type(44))  # <class 'int'>
 print(type(10.5))  # <class 'float'>
+
+
+def hotel_cost(nights):
+    '''
+    A function to calculate the cost
+    based on the amount of nights
+    '''
+    return 140 * nights
+
+
+print(hotel_cost(7))
+
+
+def plane_ride_cost(city):
+    '''
+    A function to calculate the
+    ticket cost for each destination
+    '''
+    if city == 'Charlotte':
+        return 183
+    elif city == 'Tampa':
+        return 220
+    elif city == 'Pittsburgh':
+        return 222
+    elif city == 'Los Angeles':
+        return 475
+
+
+print(plane_ride_cost('Tampa'))
+
+
+def rental_car_cost(days):
+    '''
+    Calculate the cost based on number of days the
+    car is rented for and apply discounts
+    '''
+    total = 40 * days
+    if days >= 7:
+        total -= 50
+    elif days >= 3:
+        total -= 20
+    return total
+
+
+print(rental_car_cost(5))
+
+
+def trip_cost(city, days, spending_money):
+    '''
+    Return all costs based
+    on the calculations from each function
+    '''
+    return rental_car_cost(days) + hotel_cost(
+      days - 1) + plane_ride_cost(city) + spending_money
+
+
+print(trip_cost('Los Angeles', 5, 600))
+
+# ! Lists and Dictionaries -
