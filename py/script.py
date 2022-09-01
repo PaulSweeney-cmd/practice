@@ -329,6 +329,8 @@ print(type('hello'))  # <class 'str'>
 print(type(44))  # <class 'int'>
 print(type(10.5))  # <class 'float'>
 
+# * --------------------------------
+
 
 def hotel_cost(nights):
     '''
@@ -339,6 +341,8 @@ def hotel_cost(nights):
 
 
 print(hotel_cost(7))
+
+# * --------------------------------
 
 
 def plane_ride_cost(city):
@@ -358,6 +362,8 @@ def plane_ride_cost(city):
 
 print(plane_ride_cost('Tampa'))
 
+# * --------------------------------
+
 
 def rental_car_cost(days):
     '''
@@ -375,6 +381,8 @@ def rental_car_cost(days):
 
 print(rental_car_cost(5))
 
+# * --------------------------------
+
 
 def trip_cost(city, days, spending_money):
     '''
@@ -388,3 +396,27 @@ def trip_cost(city, days, spending_money):
 print(trip_cost('Los Angeles', 5, 600))
 
 # ! Lists and Dictionaries -
+# ? A data type used to store different pieces of information
+
+# ! Lists and Dictionaries - indexing a single item in a list
+LIST_ONE = 'Hellothisisasinglestring'
+
+HELLO = LIST_ONE[:5]
+print(HELLO)
+
+THIS = LIST_ONE[5:9]
+print(THIS)
+
+# ! Lists and Dictionaries - indexing a list item
+STRING_LIST = ['One', 'Two', 'Three', 'Four', 'Five']
+BREAKDOWN_LIST = STRING_LIST[1:3]
+print(BREAKDOWN_LIST)  # prints ['Two', 'Three']
+
+# ! Lists and Dictionaries - searching for an item in a list
+ANIMALS = ["aardvark", "badger", "duck", "emu", "fennec fox"]
+DUCK_INDEX = ANIMALS.index("duck")
+print(DUCK_INDEX)  # assigns the index of 2 to the variable
+
+# ! Lists and Dictionaries - inserting an item in a list
+ANIMALS.insert(DUCK_INDEX, 'Elephant')
+print(ANIMALS)  # replaces 'duck' with 'elephant'
