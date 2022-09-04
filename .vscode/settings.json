@@ -21,7 +21,23 @@
       "**/CVS": true
    },
    "files.autoSave": "off",
-   "workbench.colorTheme": "Gitpod Dark",
+   "workbench.colorTheme": "phocus-variant",
    "terminal.integrated.gpuAcceleration": "canvas",
-   "editor.defaultFormatter": "HookyQR.beautify"
+  "editor.defaultFormatter": "HookyQR.beautify",
+  "blockman.n33A01B1FromDepth0ToInwardForAllBorders": "10,0,0,0; red > green > blue",
+  "blockman.n33A01B2FromDepth0ToInwardForAllBackgrounds": "10,1,0,3; hsl(235, 30%, 7%) > hsl(0, 0%, 7.1%) > hsl(0, 0%, 9.5%) > hsl(0, 0%, 11.15%) > hsl(0, 0%, 12.8%)",
+  "blockman.n33A02B1FromFocusToOutwardForAllBorders": "20,0,0,0; red > green > blue",
+  "blockman.n33A02B2FromFocusToOutwardForAllBackgrounds": "20,0,0,0; red > green > blue",
+  "blockman.n33A03B1FromDepth0ToInwardForFocusTreeBorders": "30,1,0,2; neutral > linear-gradient(to right, rgb(144, 54, 8), rgb(48, 36, 116))",
+  "blockman.n33A03B2FromDepth0ToInwardForFocusTreeBackgrounds": "30,0,0,0; red > green > blue",
+  "blockman.n33A05B1FromFocusToInwardForAllBorders": "50,0,0,0; red > green > blue",
+  "blockman.n33A05B2FromFocusToInwardForAllBackgrounds": "50,0,0,0; red > green > blue",
+  "blockman.n24AnalyzeRoundBrackets": false,
+  "blockman.n27AlsoRenderBlocksInsideSingleLineAreas": true,
+  "blockman.n23AnalyzeSquareBrackets": true,
+  "blockman.n17CustomColorOfFocusedBlock": "",
+  "blockman.n18CustomColorOfFocusedBlockBorder": "enable focus",
+  "blockman.n19CustomColorOfBlockBorder": "blue",
+  "blockman.n04ColorComboPreset": "Classic Dark 3 (Solid colors)",
+  "blockman.n04Sub01ColorComboPresetForDarkTheme": "Classic Dark 2 (Solid colors)"
 }

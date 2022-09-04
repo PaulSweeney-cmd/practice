@@ -185,13 +185,13 @@ func_with_args(10)
 # ? input accepts a string, prints it and then waits for the user to type
 
 
-# def users_input():
-#     '''a function to allow a user to enter a name'''
-#     enter_a_string = input('Hello, please enter your name: ')
-#     if len(enter_a_string) > 0:
-#         print('Paul')
-#     else:
-#         print('No name entered')
+def users_input():
+    '''a function to allow a user to enter a name'''
+    enter_a_string = input('Hello, please enter your name: ')
+    if len(enter_a_string) > 0:
+        print('Paul')
+    else:
+        print('No name entered')
 
 
 # users_input()
@@ -200,28 +200,28 @@ func_with_args(10)
 # ? .isalpha checks whether a given string contains alphabetic characters
 
 
-# def check_alpha_character():
-#     '''a function to check alphabetic characters in a string'''
-#     new_string = input('Hello, please enter your location: ')
-#     new_location = new_string
-#     if len(new_string) > 0 and new_string.isalpha():
-#         print('Your location is ' + new_location)
-#     else:
-#         print('No result found')
+def check_alpha_character():
+    '''a function to check alphabetic characters in a string'''
+    new_string = input('Hello, please enter your location: ')
+    new_location = new_string
+    if len(new_string) > 0 and new_string.isalpha():
+        print('Your location is ' + new_location)
+    else:
+        print('No result found')
 
 
-# check_alpha_character()
+check_alpha_character()
 
-# NEW_INPUT = input('Hello, please enter your name: ')
-# NEW_LOCATION = input('Please enter your location: ')
+NEW_INPUT = input('Hello, please enter your name: ')
+NEW_LOCATION = input('Please enter your location: ')
 
-# if len(NEW_INPUT) > 0:
-#     # using index notation to slice the first letter off each word
-#     NAME = NEW_INPUT[1:len(NEW_INPUT)]
-#     CITY = NEW_LOCATION[1:len(NEW_LOCATION)]
-#     print('Your name is, ' + NAME + ' and you\'re from ' + CITY + '.')
-# else:
-#     print('Not found.')
+if len(NEW_INPUT) > 0:
+    # using index notation to slice the first letter off each word
+    NAME = NEW_INPUT[1:len(NEW_INPUT)]
+    CITY = NEW_LOCATION[1:len(NEW_LOCATION)]
+    print('Your name is, ' + NAME + ' and you\'re from ' + CITY + '.')
+else:
+    print('Not found.')
 
 
 # ! PygLatin - translating to Pig Latin
@@ -397,6 +397,8 @@ print(trip_cost('Los Angeles', 5, 600))
 
 # ! Lists and Dictionaries -
 # ? A data type used to store different pieces of information
+# ? Lists have items - empty lists have ()
+# ? Dictionaries have key : value pairs - empty dictionaries have {}
 
 # ! Lists and Dictionaries - indexing a single item in a list
 LIST_ONE = 'Hellothisisasinglestring'
@@ -420,3 +422,59 @@ print(DUCK_INDEX)  # assigns the index of 2 to the variable
 # ! Lists and Dictionaries - inserting an item in a list
 ANIMALS.insert(DUCK_INDEX, 'Elephant')
 print(ANIMALS)  # replaces 'duck' with 'elephant'
+
+# ! Lists and Dictionaries - looping through each list item
+my_list = [1, 9, 3, 8, 5, 7]
+
+# this then multiplies each list item by 2
+for number in my_list:
+    print(2 * number)
+
+# ! Lists and Dictionaries - sorting through a list
+# ? using te sort() method we can sort each item in alphabetical order
+
+start_list = [5, 3, 1, 2, 4]
+square_list = []
+
+# iterating through each list item to perform an arithmatic operation
+for number in start_list:
+    # updating the empty list, multiplying each item by itself twice
+    square_list.append(number ** 2)
+
+square_list.sort()
+
+print(square_list)
+# [1, 4, 9, 16, 25]
+
+# ! Lists and Dictionaries - key : value pairs
+# ? here you can access the value by indexing the key
+ANIMALS = {'Dog': 300, 'Cat': 301, 'Bird': 302, 'Turtle': 303}
+print(ANIMALS['Cat'])
+
+# ! Lists and Dictionaries - adding a new dictionary entry
+# ? an important thing to remember is dictionaries are mutable just like lists
+# ? this means they can be changed after they're created
+
+# creating an empty dictionary
+DESTINATIONS = {}
+
+# adding destinations and mileage
+DESTINATIONS['Los Angeles'] = 1223
+DESTINATIONS['New York'] = 2000
+DESTINATIONS['Texas'] = 3444
+
+print('The destnatons with mileage are: ' + str(DESTINATIONS))
+
+# ! Lists and Dictionaries - deleting a dictionary entry
+ANIMALS = {'Dog': 300, 'Cat': 301, 'Bird': 302, 'Turtle': 303}
+
+del ANIMALS['Bird']
+print(ANIMALS)
+
+# ! Lists and Dictionaries - updating a dictionary entry
+ANIMALS['Cat'] = 310
+print(ANIMALS)
+
+# ! Lists and Dictionaries - removing a list item
+backpack = ['xylophone', 'dagger', 'tent', 'bread loaf']
+backpack.remove('dagger')
