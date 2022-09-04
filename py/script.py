@@ -7,7 +7,7 @@ import math
 
 # ! Python Syntax - PRINT STATEMENTS
 # allows the programme to have a conversation with the user
-# python-2 syntax print statements have no parentheses, in python-3 they do
+# Python2 syntax print statements have no parentheses, in Python3 they do
 
 print('Hello and welcome back')
 
@@ -22,16 +22,23 @@ print('I am a string written with an escaper in paul\'s example')
 # Combining or 'concatenating' strings
 print("This string has been " + "concatenated")
 
+# ! Python Syntax - ERRORS
+
 # * EOL error (End Of Line) - EOL while scanning a string literal
-# Python interpreter expected a particular character or set of characters
+# Python Interpreter expected a particular character or set of characters
+# It reached the end of the line when it tried to scan the string literal
+# The string literals must be enclosed in single and double quotation marks.
 
 # * NameError
 # Python doesnt recognise the command due to it not being defined anywhere
+# Occurs when you try to use a variable/function/module that doesn't exist
 
 # ! Python Syntax - VARIABLES
 # Defining things that are subject to change
-# they are case sensitive
+# They are case sensitive
 # They always include an underscore
+# Python2 syntax = lowercase
+# Python3 syntax = uppercase
 
 # ! Python Syntax - UPDATING VARIABLES
 
@@ -250,18 +257,18 @@ power(37, 4)
 
 # * --------------------------------EXAMPLE ONE
 
-def one_good_turn(number):
+def one_good_turn(num1):
     ''' Adds 1 to the argument in the function call '''
-    return number + 1
+    return num1 + 1
 
 
 print(one_good_turn(25))  # prints 26
 
 
-def deserves_another(number):
+def deserves_another(num1):
     ''' Calls the first function and carries
       on the calculation '''
-    return one_good_turn(number) + 2
+    return one_good_turn(num1) + 2
 
 
 print(deserves_another(25))  # prints 28
@@ -269,20 +276,20 @@ print(deserves_another(25))  # prints 28
 # * --------------------------------EXAMPLE TWO
 
 
-def cube(number):
+def cube(num1):
     ''' calculating 10 to the power of 3 '''
-    return number ** 3
+    return num1 ** 3
 
 
 print(cube(10))  # prints 1000 / 10 * 10 * 10
 
 
-def by_three(number):
+def by_three(num1):
     ''' passing in first function to produce a
     result based on outcome of conditional
     statement '''
     if number % 3 == 0:
-        return cube(number)
+        return cube(num1)
     else:
         return False
 
