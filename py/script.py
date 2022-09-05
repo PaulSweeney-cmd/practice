@@ -33,6 +33,10 @@ print("This string has been " + "concatenated")
 # Python doesnt recognise the command due to it not being defined anywhere
 # Occurs when you try to use a variable/function/module that doesn't exist
 
+# * ValueError
+# function receives an argument of the correct type but an inappropriate value
+# occurs commonly in mathmatical operations
+
 # ! Python Syntax - VARIABLES
 # Defining things that are subject to change
 # They are case sensitive
@@ -59,7 +63,7 @@ print(DAYS_WORKED)
 # Floats can be declared by adding a decimal to the end of an integer
 # You can define a float using scientific notation by adding e2:
 
-POWER_OF_TEN_FLOAT = 1.5e2  # * 1.5 to the power of 10 (e2) = 150
+POWER_OF_TEN_FLOAT = 1.5e2  # 1.5 to the power of 10 (e2) = 150
 print(POWER_OF_TEN_FLOAT)
 
 # ! Python Syntax - TWO TYPES OF DIVISION
