@@ -39,5 +39,8 @@
   "blockman.n18CustomColorOfFocusedBlockBorder": "enable focus",
   "blockman.n19CustomColorOfBlockBorder": "blue",
   "blockman.n04ColorComboPreset": "Classic Dark 3 (Solid colors)",
-  "blockman.n04Sub01ColorComboPresetForDarkTheme": "Classic Dark 2 (Solid colors)"
+  "blockman.n04Sub01ColorComboPresetForDarkTheme": "Classic Dark 2 (Solid colors)",
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.python"
+  }
 }

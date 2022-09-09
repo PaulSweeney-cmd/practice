@@ -292,7 +292,7 @@ def by_three(num1):
     ''' passing in first function to produce a
     result based on outcome of conditional
     statement '''
-    if number % 3 == 0:
+    if num1 % 3 == 0:
         return cube(num1)
     else:
         return False
@@ -489,3 +489,36 @@ print(ANIMALS)
 # ! Lists and Dictionaries - removing a list item
 backpack = ['xylophone', 'dagger', 'tent', 'bread loaf']
 backpack.remove('dagger')
+
+# ! Lists and Dictionaries - dictionary values
+
+DICTIONARY_WITH_DIFF_VALUES = {
+  'list': ['this', 'is', 'a', 'list'],
+  'integer': 1000,
+  'string': 'This is a string value'
+}
+# example of accessing a value using indexing
+print(DICTIONARY_WITH_DIFF_VALUES['list'][1])
+
+# ! Lists and Dictionaries - adding & sorting key / values
+DICTIONARY_WITH_DIFF_VALUES['new_list'] = ['another', 'list', 'with', 'values']
+DICTIONARY_WITH_DIFF_VALUES['list'].sort()
+DICTIONARY_WITH_DIFF_VALUES['list'].remove('is')
+DICTIONARY_WITH_DIFF_VALUES['integer'] += 2000
+
+print(DICTIONARY_WITH_DIFF_VALUES)
+
+
+def fizz_count(fizz_list):
+    ''' a function to return the amount of
+    times 'fizz' is found in a list '''
+    counter = 0
+    for item in fizz_list:
+        if item == 'fizz':
+            counter = counter + 1
+    return counter
+
+
+fizz = ["fizz", "cat", "fizz"]
+RESULT = fizz_count(fizz)
+print(RESULT)
