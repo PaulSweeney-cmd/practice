@@ -351,6 +351,7 @@ def hotel_cost(nights):
     return 140 * nights
 
 
+# prints 980
 print(hotel_cost(7))
 
 # * --------------------------------
@@ -371,6 +372,7 @@ def plane_ride_cost(city):
         return 475
 
 
+# prints 220
 print(plane_ride_cost('Tampa'))
 
 # * --------------------------------
@@ -390,6 +392,7 @@ def rental_car_cost(days):
     return total
 
 
+# prints 180
 print(rental_car_cost(5))
 
 # * --------------------------------
@@ -404,6 +407,7 @@ def trip_cost(city, days, spending_money):
       days - 1) + plane_ride_cost(city) + spending_money
 
 
+# prints 1815
 print(trip_cost('Los Angeles', 5, 600))
 
 # ! Lists and Dictionaries -
@@ -415,10 +419,10 @@ print(trip_cost('Los Angeles', 5, 600))
 LIST_ONE = 'Hellothisisasinglestring'
 
 HELLO = LIST_ONE[:5]
-print(HELLO)
+print(HELLO) # prints 'Hello'
 
 THIS = LIST_ONE[5:9]
-print(THIS)
+print(THIS) # prints 'this
 
 # ! Lists and Dictionaries - indexing a list item
 STRING_LIST = ['One', 'Two', 'Three', 'Four', 'Five']
@@ -522,3 +526,32 @@ def fizz_count(fizz_list):
 fizz = ["fizz", "cat", "fizz"]
 RESULT = fizz_count(fizz)
 print(RESULT)
+
+# ! Lists and Functions - List element modification
+n = [1, 3, 5]
+# accessng the second element to modify the number
+RESULT = n[1] * 5
+# updating the second element
+n[1] = RESULT
+print(n)
+
+
+n = [[1, 2, 3], [4, 5, 6, 7, 8, 9]]
+
+
+def flatten(lists):
+    ''' an example of iterating nested
+    list using nested for loops '''
+    results = []
+    # seperating the two lists with the first for loop
+    for numbers in lists:
+        # targeting all list elements
+        for number in numbers:
+            # appending all elements to the empty list
+            results.append(number)
+    return results
+
+
+print(flatten(n))
+
+# ! Loops
