@@ -419,10 +419,10 @@ print(trip_cost('Los Angeles', 5, 600))
 LIST_ONE = 'Hellothisisasinglestring'
 
 HELLO = LIST_ONE[:5]
-print(HELLO) # prints 'Hello'
+print(HELLO)  # prints 'Hello'
 
 THIS = LIST_ONE[5:9]
-print(THIS) # prints 'this
+print(THIS)  # prints 'this
 
 # ! Lists and Dictionaries - indexing a list item
 STRING_LIST = ['One', 'Two', 'Three', 'Four', 'Five']
@@ -546,9 +546,9 @@ def flatten(lists):
     # seperating the two lists with the first for loop
     for numbers in lists:
         # targeting all list elements
-        for number in numbers:
+        for digits in numbers:
             # appending all elements to the empty list
-            results.append(number)
+            results.append(digits)
     return results
 
 
