@@ -554,4 +554,23 @@ def flatten(lists):
 
 print(flatten(n))
 
-# ! Loops
+# ! Loops - an overview!
+# While loop = runs a loop as long as the condition is met
+INCREMENT = 0
+
+while INCREMENT < 10:
+    INCREMENT += 1
+    print(INCREMENT)
+
+# Infinate Loop = prevents the condition from becoming false
+# - runs if the condition cant become false
+
+# ! Loops - break keyword
+# means to exit a loop
+COUNT = 0
+
+while True:
+    print(COUNT)
+    COUNT += 1
+    if COUNT >= 10:
+        break
