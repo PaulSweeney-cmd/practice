@@ -570,7 +570,10 @@ while INCREMENT < 10:
 COUNT = 0
 
 while True:
-    print(COUNT)
     COUNT += 1
+    print(COUNT)
     if COUNT >= 10:
         break
+
+# ! Loops - while/else
+# similar to if/else BUT else will execute if the condition is false
