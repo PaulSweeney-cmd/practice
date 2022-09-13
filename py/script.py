@@ -588,18 +588,18 @@ while True:
         break
 
 # ! Loops - while/else
-# similar to if/else BUT else will execute if the condition is false
+# similar to if/else BUT else will execute if a condition is false
 
 random_number = randint(1, 10)
 
-guesses_left = 3
+GUESSES_LEFT = 3
 # Start your game!
-while guesses_left > 0:
+while GUESSES_LEFT > 0:
     guess = int(input('Please enter your guess: '))
     if guess == random_number:
         print('You win')
         break
-    guesses_left -= 1
+    GUESSES_LEFT -= 1
 else:
     print('You lose.')
 
@@ -610,7 +610,37 @@ PHRASE = 'This is a sentence'
 
 for i in PHRASE:
     if i == 'T' or i == 'e':
-        print(str(2)),
+        # replaces both characters with the number 2
+        # integer has to be converted to a string
+        print(str(2))
     else:
         print(i)
 
+# ! Loops - looping over a dictionary
+dic = {'a': 'one', 'b': 'two', 'c': 'three'}
+
+
+for i in dic:
+    print(i, dic[i])
+
+# ! Loops - iterating using enumerate()
+# exaple of printing items with their index
+
+FOOD_CHOICES = ['Steak', 'Chips', 'Peas', 'Onion rings']
+print('Your choices for tonights meals are: ')
+
+# enumerate function adds a counter to the item
+for index, item in enumerate(FOOD_CHOICES):
+    print(index + 1, '-', item)
+
+# ! Loops - iterating over two lists using zip()
+
+LIST_ONE = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+LIST_TWO = [2, 4, 6, 8, 10, 12]
+
+# using zip() function to assign two lists to two items
+for one, two in zip(LIST_ONE, LIST_TWO):
+    if one > two:
+        print(one)
+    else:
+        print(two)
