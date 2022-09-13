@@ -3,6 +3,7 @@ from datetime import datetime
 import math
 # from math import sqrt
 # from math import *
+from random import randint
 
 
 # ! Python Syntax - PRINT STATEMENTS
@@ -556,6 +557,17 @@ print(flatten(n))
 
 # ! Loops - an overview!
 # While loop = runs a loop as long as the condition is met
+
+hobbies = []
+
+for i in range(3):
+    hobby = input('Please enter a hobby: ')
+    # updates the empty list with the input variable
+    hobbies.append(hobby)
+# loops thorugh the new index and prints list in order they were entered
+print(hobbies)
+
+
 INCREMENT = 0
 
 while INCREMENT < 10:
@@ -577,3 +589,28 @@ while True:
 
 # ! Loops - while/else
 # similar to if/else BUT else will execute if the condition is false
+
+random_number = randint(1, 10)
+
+guesses_left = 3
+# Start your game!
+while guesses_left > 0:
+    guess = int(input('Please enter your guess: '))
+    if guess == random_number:
+        print('You win')
+        break
+    guesses_left -= 1
+else:
+    print('You lose.')
+
+# ! Loops - string manipulation
+# Modifying content in a string
+
+PHRASE = 'This is a sentence'
+
+for i in PHRASE:
+    if i == 'T' or i == 'e':
+        print(str(2)),
+    else:
+        print(i)
+
