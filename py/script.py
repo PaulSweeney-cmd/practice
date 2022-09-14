@@ -650,8 +650,9 @@ for one, two in zip(LIST_ONE, LIST_TWO):
 
 # ? --------------------------------------------------------------------------
 # ! Loops - For / else
-# else is executed after the for, only executes if the loop breaks normally
+# else is executed after the for, only executes if the loop executes normally
 # if a break keyword is used the else statement won't execute
+# similar to if/else but instead else is indented at the same level as for
 
 
 fruits = ['banana', 'apple', 'orange', 'tomato', 'pear', 'grape']
@@ -660,10 +661,57 @@ print('You have...')
 for f in fruits:
     if f == 'tomato':
         # breaks off from the loop when the iteration reaches 'tomato'
-        print('A tomato is not a fruit!')  # (It actually is.)
+        print('A tomato is not a fruit!')
         break
-    # prints off each item up until 'tomato'
-    print('A', f)
+    print('A', f)  # prints off each item up until 'tomato'
 else:
     # won't execute cause the loop breaks when tomato is detected
     print('A fine selection of fruits!')
+
+# ? --------------------------------------------------------------------------
+
+fruits = ['banana', 'apple', 'orange', 'tomato', 'pear', 'grape']
+
+print('You have...')
+for f in fruits:
+    if f == 'satsuma':
+        # entire block executes as normal and prints off all list items
+        print('A tomato is not a fruit!')
+        break
+    print('A', f)
+else:
+    # this would execute because 'satsuma' wasn't found in the loop
+    print('A fine selection of fruits!')
+
+# ? --------------------------------------------------------------------------
+
+
+def is_int(x):
+    ''' function to check if args are integers '''
+    # abs() returns an absolute value of a number
+    result = abs(x)
+    # round() returns float that is a rounded version of specified number
+    rounded = round(result)
+    return result - rounded == 0
+
+
+print(is_int(20))
+print(is_int(20.5))
+
+# ? --------------------------------------------------------------------------
+
+
+def digit_sum(numbers):
+    '''
+    function to convert numbers to strings,
+    iterate over each and convert back to integers
+    to add together
+    '''
+    total = 0
+    string_n = str(numbers)  # str() to convert integers to string
+    for char in string_n:  # iterate over each str item
+        total += int(char)  # convert back to integers and do calculation
+    return total  # return the result
+
+
+print(digit_sum(1234))  # call function with arguments
