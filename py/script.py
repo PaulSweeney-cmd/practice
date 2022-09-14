@@ -518,8 +518,8 @@ def fizz_count(fizz_list):
     ''' a function to return the amount of
     times 'fizz' is found in a list '''
     counter = 0
-    for item in fizz_list:
-        if item == 'fizz':
+    for items in fizz_list:
+        if items == 'fizz':
             counter = counter + 1
     return counter
 
@@ -538,6 +538,8 @@ print(n)
 
 
 n = [[1, 2, 3], [4, 5, 6, 7, 8, 9]]
+
+# ? --------------------------------------------------------------------------
 
 
 def flatten(lists):
@@ -567,6 +569,7 @@ for i in range(3):
 # loops thorugh the new index and prints list in order they were entered
 print(hobbies)
 
+# ? --------------------------------------------------------------------------
 
 INCREMENT = 0
 
@@ -644,3 +647,23 @@ for one, two in zip(LIST_ONE, LIST_TWO):
         print(one)
     else:
         print(two)
+
+# ? --------------------------------------------------------------------------
+# ! Loops - For / else
+# else is executed after the for, only executes if the loop breaks normally
+# if a break keyword is used the else statement won't execute
+
+
+fruits = ['banana', 'apple', 'orange', 'tomato', 'pear', 'grape']
+
+print('You have...')
+for f in fruits:
+    if f == 'tomato':
+        # breaks off from the loop when the iteration reaches 'tomato'
+        print('A tomato is not a fruit!')  # (It actually is.)
+        break
+    # prints off each item up until 'tomato'
+    print('A', f)
+else:
+    # won't execute cause the loop breaks when tomato is detected
+    print('A fine selection of fruits!')
