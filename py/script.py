@@ -715,3 +715,52 @@ def digit_sum(numbers):
 
 
 print(digit_sum(1234))  # call function with arguments
+
+# ? --------------------------------------------------------------------------
+# ! Calculating the factorial of a non-negative integer
+
+# multiplied with all the integers that lie between 1 and the number itself.
+# It is repersented by !. so 5! = 5 x 4 x 3 x 2 x 1 = 120
+
+
+def factorial(x):
+    '''
+    factorial calculation
+    in a function
+    '''
+    total = 1  # starts the calculation at 1
+    while x > 0:  # loops through all numbers contained in the argument
+        total *= x  # multiplies 1 by each increment in the loop
+        x -= 1  # reverses the loop so it starts at 5 and multiplies down
+    return total  # arg x 4 x 3 x 2 x 1
+
+
+print(factorial(5))  # 120
+
+# ? --------------------------------------------------------------------------
+# ! Prime Number
+# A number that is only divisible by one and by itself
+# 
+# no numbers less than 2 are prime numbers
+#
+
+number = int(input('Please enter a positive number: '))
+
+
+def check_prime(num):
+    '''
+    a function to check if a number
+    is a prime number
+    '''
+    if num <= 1:
+        return False
+    for indx in range(2, int(math.sqrt(num) + 1)):
+        if num % indx == 0:
+            return False
+    return True
+
+
+if check_prime(number):
+    print('This is a prime number.')
+else:
+    print('This is NOT  prime number.')
