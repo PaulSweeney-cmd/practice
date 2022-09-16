@@ -740,9 +740,7 @@ print(factorial(5))  # 120
 # ? --------------------------------------------------------------------------
 # ! Prime Number
 # A number that is only divisible by one and by itself
-# 
 # no numbers less than 2 are prime numbers
-#
 
 number = int(input('Please enter a positive number: '))
 
