@@ -762,3 +762,110 @@ if check_prime(number):
     print('This is a prime number.')
 else:
     print('This is NOT  prime number.')
+
+# ? --------------------------------------------------------------------------
+
+
+grades = [100, 100, 90, 40, 80, 100, 85, 70, 90, 65, 90, 85, 50.5]
+
+
+def grades_sum(scores):
+    '''
+    a function to add all scores in
+    the list and print the result
+    '''
+    total = 0
+    for grade in scores:
+        total += grade
+    return total
+
+
+print(grades_sum(grades))
+
+
+def grades_average(grades_input):
+    ''' a function to calculate the average score '''
+    return grades_sum(grades_input) / float(len(grades_input))
+    # divides the total from the first function by number of individual scores
+
+
+print(grades_average(grades))
+
+
+# ! ADVANCED TOPICS - Iterators for Dictionaries
+# Iterators are seperate items in a dictionary
+
+MY_DICTIONARY = {
+  'name': 'Paul Sweeney',
+  'age': 37,
+  'male': True
+}
+
+
+print(MY_DICTIONARY.items())
+# dict_items([('name', 'Paul Sweeney'), ('age', 37), ('male', True)])
+
+# ! ADVANCED TOPICS - keys / values
+print(MY_DICTIONARY.keys())  # dict_keys(['name', 'age', 'male'])
+print(MY_DICTIONARY.values())  # dict_values(['Paul Sweeney', 37, True])
+
+# ! ADVANCED TOPICS - 'in' Operator
+# used to iterate though a list or dictionary data etc
+# assigns the word 'key' to each item in the list / dictionary etc
+for key in MY_DICTIONARY:
+    print(key, MY_DICTIONARY[key])
+
+# ! ADVANCED TOPICS - List Comprehension
+# list comprehension is inline code encased in []
+# example of filtering even numbers from 1 to 50 and printing result in a list
+evens_to_50 = [i for i in range(51) if i % 2 == 0]
+print(evens_to_50)
+
+# calculates the square root of each number from 1 to 11
+even_squares = [x ** 2 for x in range(1, 12) if (x ** 2) % 2 == 0]
+print(even_squares)
+
+# calculating the cube of a number from 1 to 10
+cubes_by_four = [x ** 3 for x in range(1, 11) if (x ** 3) % 4 == 0]
+print(cubes_by_four)
+
+# ! ADVANCED TOPICS - Index Striding in List Slicing
+# skips each index by a specific space
+# Below you're printing out all odd numbers ranging fronm 1 - 10
+MY_LIST = range(1, 11)
+
+# prints out each second decimal after 1
+print(MY_LIST[::2])  # [1, 3, 5, 7, 9]
+
+# List slicing using negative striding
+print(MY_LIST[::-1])  # [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+
+
+# ! ADVANCED TOPICS - anonymous functions
+# lambda is used to create an anonymous function
+# an alternative to writing a normal function:
+
+# normal version
+def divide_by_three(x):
+    ''' example one '''
+    return x % 3 == 0
+
+
+# anonymous version:
+print(lambda x: x % 3 == 0)
+
+
+my_list = range(16)
+# using filter keyword to filter out all odd numbers from 1 - 16
+# works similar to an inline function with an if statement
+print(filter(lambda x: x % 3 == 0, my_list))
+
+# a list of all squared numbers from 1 to 10
+squares = [x ** 2 for x in range(1, 11)]
+# filtering out all squared numbers between 30 and 70
+print(filter(lambda x: x > 30 and x < 70, squares))
+
+# filtering characters out of a string
+GARBLED = "IXXX aXXmX aXXXnXoXXXXXtXhXeXXXXrX sXXXXeXcXXXrXeXt mXXeXsXXXsXaXXXXXXgXeX!XX"
+MESSAGE = ''.join(filter(lambda x: x not in ["X"], GARBLED))
+print(MESSAGE)
