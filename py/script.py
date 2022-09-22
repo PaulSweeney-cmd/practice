@@ -236,7 +236,7 @@ else:
     print('Not found.')
 
 
-# ! PygLatin - translating to Pig Latin
+# ! PygLatin - Translating to Pig Latin
 # Rules for translation - move the first letter of the word to the end
 # Rules for translation - you then add the ay suffix to the end
 
@@ -416,7 +416,7 @@ print(trip_cost('Los Angeles', 5, 600))
 # Lists have items - empty lists have ()
 # Dictionaries have key : value pairs - empty dictionaries have {}
 
-# ! Lists and Dictionaries - indexing a single item in a list
+# ! Lists and Dictionaries - Indexing a single item in a list
 LIST_ONE = 'Hellothisisasinglestring'
 
 HELLO = LIST_ONE[:5]
@@ -425,17 +425,17 @@ print(HELLO)  # prints 'Hello'
 THIS = LIST_ONE[5:9]
 print(THIS)  # prints 'this
 
-# ! Lists and Dictionaries - indexing a list item
+# ! Lists and Dictionaries - Indexing a list item
 STRING_LIST = ['One', 'Two', 'Three', 'Four', 'Five']
 BREAKDOWN_LIST = STRING_LIST[1:3]
 print(BREAKDOWN_LIST)  # prints ['Two', 'Three']
 
-# ! Lists and Dictionaries - searching for an item in a list
+# ! Lists and Dictionaries - Searching for an item in a list
 ANIMALS = ["aardvark", "badger", "duck", "emu", "fennec fox"]
 DUCK_INDEX = ANIMALS.index("duck")
 print(DUCK_INDEX)  # assigns the index of 2 to the variable
 
-# ! Lists and Dictionaries - inserting an item in a list
+# ! Lists and Dictionaries - Inserting an item in a list
 ANIMALS.insert(DUCK_INDEX, 'Elephant')
 print(ANIMALS)  # replaces 'duck' with 'elephant'
 
@@ -446,7 +446,7 @@ my_list = [1, 9, 3, 8, 5, 7]
 for number in my_list:
     print(2 * number)
 
-# ! Lists and Dictionaries - sorting through a list
+# ! Lists and Dictionaries - Sorting through a list
 # using te sort() method we can sort each item in alphabetical order
 
 start_list = [5, 3, 1, 2, 4]
@@ -462,12 +462,12 @@ square_list.sort()
 print(square_list)
 # [1, 4, 9, 16, 25]
 
-# ! Lists and Dictionaries - key : value pairs
+# ! Lists and Dictionaries - Key : Value pairs
 # here you can access the value by indexing the key
 ANIMALS = {'Dog': 300, 'Cat': 301, 'Bird': 302, 'Turtle': 303}
 print(ANIMALS['Cat'])
 
-# ! Lists and Dictionaries - adding a new dictionary entry
+# ! Lists and Dictionaries - Adding a new dictionary entry
 # an important thing to remember is dictionaries are mutable just like lists
 # this means they can be changed after they're created
 
@@ -481,21 +481,21 @@ DESTINATIONS['Texas'] = 3444
 
 print('The destnatons with mileage are: ' + str(DESTINATIONS))
 
-# ! Lists and Dictionaries - deleting a dictionary entry
+# ! Lists and Dictionaries - Deleting a dictionary entry
 ANIMALS = {'Dog': 300, 'Cat': 301, 'Bird': 302, 'Turtle': 303}
 
 del ANIMALS['Bird']
 print(ANIMALS)
 
-# ! Lists and Dictionaries - updating a dictionary entry
+# ! Lists and Dictionaries - Updating a dictionary entry
 ANIMALS['Cat'] = 310
 print(ANIMALS)
 
-# ! Lists and Dictionaries - removing a list item
+# ! Lists and Dictionaries - Removing a list item
 backpack = ['xylophone', 'dagger', 'tent', 'bread loaf']
 backpack.remove('dagger')
 
-# ! Lists and Dictionaries - dictionary values
+# ! Lists and Dictionaries - Dictionary values
 
 DICTIONARY_WITH_DIFF_VALUES = {
   'list': ['this', 'is', 'a', 'list'],
@@ -505,7 +505,7 @@ DICTIONARY_WITH_DIFF_VALUES = {
 # example of accessing a value using indexing
 print(DICTIONARY_WITH_DIFF_VALUES['list'][1])
 
-# ! Lists and Dictionaries - adding & sorting key / values
+# ! Lists and Dictionaries - Adding & sorting key / values
 DICTIONARY_WITH_DIFF_VALUES['new_list'] = ['another', 'list', 'with', 'values']
 DICTIONARY_WITH_DIFF_VALUES['list'].sort()
 DICTIONARY_WITH_DIFF_VALUES['list'].remove('is')
@@ -557,7 +557,7 @@ def flatten(lists):
 
 print(flatten(n))
 
-# ! Loops - an overview!
+# ! Loops - An Overview!
 # While loop = runs a loop as long as the condition is met
 
 hobbies = []
@@ -580,7 +580,7 @@ while INCREMENT < 10:
 # Infinate Loop = prevents the condition from becoming false
 # - runs if the condition cant become false
 
-# ! Loops - break keyword
+# ! Loops - Break Keyword
 # means to exit a loop
 COUNT = 0
 
@@ -590,7 +590,7 @@ while True:
     if COUNT >= 10:
         break
 
-# ! Loops - while/else
+# ! Loops - While / Else
 # similar to if/else BUT else will execute if a condition is false
 
 random_number = randint(1, 10)
@@ -606,7 +606,7 @@ while GUESSES_LEFT > 0:
 else:
     print('You lose.')
 
-# ! Loops - string manipulation
+# ! Loops - String Manipulation
 # Modifying content in a string
 
 PHRASE = 'This is a sentence'
@@ -619,14 +619,14 @@ for i in PHRASE:
     else:
         print(i)
 
-# ! Loops - looping over a dictionary
+# ! Loops - Looping over a dictionary
 dic = {'a': 'one', 'b': 'two', 'c': 'three'}
 
 
 for i in dic:
     print(i, dic[i])
 
-# ! Loops - iterating using enumerate()
+# ! Loops - Iterating using enumerate()
 # exaple of printing items with their index
 
 FOOD_CHOICES = ['Steak', 'Chips', 'Peas', 'Onion rings']
@@ -636,7 +636,7 @@ print('Your choices for tonights meals are: ')
 for index, item in enumerate(FOOD_CHOICES):
     print(index + 1, '-', item)
 
-# ! Loops - iterating over two lists using zip()
+# ! Loops - Iterating over two lists using zip()
 
 LIST_ONE = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 LIST_TWO = [2, 4, 6, 8, 10, 12]
@@ -792,6 +792,9 @@ def grades_average(grades_input):
 print(grades_average(grades))
 
 
+# ? --------------------------------------------------------------------------
+
+
 # ! ADVANCED TOPICS - Iterators for Dictionaries
 # Iterators are seperate items in a dictionary
 
@@ -841,7 +844,7 @@ print(MY_LIST[::2])  # [1, 3, 5, 7, 9]
 print(MY_LIST[::-1])  # [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
 
 
-# ! ADVANCED TOPICS - anonymous functions
+# ! ADVANCED TOPICS - Anonymous Functions
 # lambda is used to create an anonymous function
 # an alternative to writing a normal function:
 
@@ -869,3 +872,129 @@ print(filter(lambda x: x > 30 and x < 70, squares))
 GARBLED = "IXXX aXXmX aXXXnXoXXXXXtXhXeXXXXrX sXXXXeXcXXXrXeXt mXXeXsXXXsXaXXXXXXgXeX!XX"
 MESSAGE = ''.join(filter(lambda x: x not in ["X"], GARBLED))
 print(MESSAGE)
+
+# ? --------------------------------------------------------------------------
+
+# ! Classes - Introduction
+
+# Python is object oriented programming which means it can manipulate constructs called objects
+# Objects are data structures that contain data and functions
+# Object functions are called methods
+
+# A class is a way of organising and producing objects with similar attributes and methods
+# A way to constuct a class would be the following:
+# 1 - define your class and add the instances (data) you want to manipulate with functions inside the class
+# 2 - define your functions
+# 3 - add a variable with the data you want to assign to those instances
+
+# ! Classes - Syntax
+
+
+class AnimalOne(object):  # object class your class is inheriting from
+    ''' syntax example '''
+    # pass = pass keyword acts as a placeholder in areas of yur code where Python expects and expression
+
+# ! Classes - __init__()
+
+
+class AnimalTwo(object):
+    ''' syntax example '''
+    # self refers to the object being created
+    def __init__(self):  # initializes the objects it creates
+        pass
+
+# ! Classes - Creating an object
+# python will always use the first parameter (self) it recieves to refer to the object
+# it's convetional to use 'self' as all programmers use this
+
+
+class AnimalThree(object):
+    ''' syntax example '''
+    def __init__(self, name):  # passing in a parameter (name)
+        self.name = name  # initializing the object
+
+# ! Classes - Accessing attributes
+# dot notation is used to access
+
+
+class AnimalFour(object):
+    ''' syntax example '''
+    def __init__(self, name, colour, is_from_africa):
+        self.name = name
+        self.colour = colour
+        self.is_from_africa = is_from_africa
+
+
+# creating an instance of AnimalFour class
+zebra = AnimalFour('Jeffrey', 'Black & White', True)
+# printing the values
+print(zebra.name)
+print(zebra.colour)
+print(zebra.is_from_africa)
+
+# ! Classes - Functions
+# Functions in classes are known as methods
+# __init__() is a method to initialize an object
+
+# ! Classes - Member variables
+# These are variables that are available to all members of a class
+
+# ! Classes - Example of adding a customer and items
+
+
+class ShoppingCart(object):
+    ''' creating a customer class '''
+
+    def __init__(self, customer_name):
+        self.customer_name = customer_name
+        self.items_in_cart = {}
+
+    def add_item(self, product, price):
+        """Add product to the cart."""
+        if product not in self.items_in_cart:
+            self.items_in_cart[product] = price
+            print(product + " added.")
+        else:
+            print(product + " is already in the cart.")
+
+
+# creating instances and adding values
+MY_CART = ShoppingCart('Paul')
+MY_CART.add_item('Tshirt', 14.95)
+
+
+# ! Classes - Inheritance!
+# A class inherits the attributes & methods of another
+
+# ! Classes Overide - a means of re-creating a method
+# Inheriting another class and overriding attributes and methods
+
+class Employee(object):
+    """Models real-life employees!"""
+    def __init__(self, employee_name):
+        self.employee_name = employee_name
+
+    def calculate_wage(self, hours):
+        """ calculating hours """
+        self.hours = hours
+        return hours * 20.00
+
+
+# overriding the calculate_wage in the base class
+
+
+class PartTimeEmployee(Employee):
+    """ overriding hours worked """
+    def calculate_wage(self, hours):
+        self.hours = hours
+        return hours * 12.00
+
+# ! Classes Overide - super()
+    # a super() function is used to give access to methods of a parent or sibling class
+    # returns an object that represents the parent class
+    def full_time_wage(self, hours):
+        ''' example of using super() '''
+        return super(PartTimeEmployee, self).calculate_wage(hours)
+
+# ! Classes Overide - difference between super and inherit
+# super() = used to 
