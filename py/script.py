@@ -990,11 +990,48 @@ class PartTimeEmployee(Employee):
         return hours * 12.00
 
 # ! Classes Overide - super()
-    # a super() function is used to give access to methods of a parent or sibling class
+    # The function is used to give access to methods of a parent or sub class
     # returns an object that represents the parent class
     def full_time_wage(self, hours):
         ''' example of using super() '''
         return super(PartTimeEmployee, self).calculate_wage(hours)
 
-# ! Classes Overide - difference between super and inherit
-# super() = used to 
+# ! Classes Overide - Instantiating an object
+
+
+class Triangle(object):
+    ''' Syntax '''
+    def __init__(self, angle1, angle2, angle3):
+        self.angle1 = angle1
+        self.angle2 = angle2
+        self.angle3 = angle3
+
+    number_of_sides = 3
+
+    def check_angles(self):
+        ''' Syntax '''
+        if self.angle1 + self.angle2 + self.angle3 == 180:
+            return True
+        else:
+            return False
+
+
+# Creating an instance opf a class is basically asigning a class to a variable
+my_triangle = Triangle(90, 30, 60)
+print(my_triangle.number_of_sides)
+print(my_triangle.check_angles())
+# ! Classes Overide - Inheritance
+
+# Inheriting from the Triangle class and setting new values to the object
+
+
+class Equilateral(Triangle):
+    ''' Syntax '''
+    angle = 60
+
+    def __init__(self):
+        super().__init__(angle1, angle2, angle3)
+        # These will now each have a value of 60
+        self.angle1 = self.angle
+        self.angle2 = self.angle
+        self.angle3 = self.angle
