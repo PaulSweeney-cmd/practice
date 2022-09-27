@@ -6,13 +6,15 @@ import math
 from random import randint
 
 
-# ! Python Syntax - PRINT STATEMENTS
+# ! PYTHON SYNTAX
+
+# ! Print Statements
 # allows the programme to have a conversation with the user
 # Python2 syntax print statements have no parentheses, in Python3 they do
 
 print('Hello and welcome back')
 
-# ! Python Syntax - STRINGS
+# ! Strings
 # strings contain letters, numbers and symbols in a specific order
 # strings are basically text
 # strings can be encased in either single or double quotes
@@ -23,7 +25,7 @@ print('I am a string written with an escaper in paul\'s example')
 # Combining or 'concatenating' strings
 print("This string has been " + "concatenated")
 
-# ! Python Syntax - ERRORS
+# ! Errors
 
 # * EOL error (End Of Line) - EOL while scanning a string literal
 # Python Interpreter expected a particular character or set of characters
@@ -38,14 +40,14 @@ print("This string has been " + "concatenated")
 # function receives an argument of the correct type but an inappropriate value
 # occurs commonly in mathmatical operations
 
-# ! Python Syntax - VARIABLES
+# ! Variables
 # Defining things that are subject to change
 # They are case sensitive
 # They always include an underscore
 # Python2 syntax = lowercase
 # Python3 syntax = uppercase
 
-# ! Python Syntax - UPDATING VARIABLES
+# ! Updating Variables
 
 DAYS_WORKED = 6
 PARCELS_DELIVERED = 150
@@ -54,12 +56,12 @@ PARCELS_DELIVERED = 150
 DAYS_WORKED *= PARCELS_DELIVERED
 print(DAYS_WORKED)
 
-# ! Python Syntax - ARITHMATIC
+# ! Arithmatic
 # Operators + / * -
 # MODULO OPERATOR (%) = returns a remainder after the division
 # (to the power of) = 3 ** 4 is 3 multiplied by itself 4 times
 
-# ! Python Syntax - NUMBERS
+# ! Numbers
 # Variables can hold one of two numbers, FLOAT AND INTEGER
 # Floats can be declared by adding a decimal to the end of an integer
 # You can define a float using scientific notation by adding e2:
@@ -67,7 +69,7 @@ print(DAYS_WORKED)
 POWER_OF_TEN_FLOAT = 1.5e2  # 1.5 to the power of 10 (e2) = 150
 print(POWER_OF_TEN_FLOAT)
 
-# ! Python Syntax - TWO TYPES OF DIVISION
+# ! Two Types of Division
 # you can divide numbers using conventional /
 # you can add a decimal if you were dividing uneven numbers to get a float:
 
@@ -79,7 +81,7 @@ print(DIVIDE_FLOAT_TWO)
 QUOTIENT = float(10/3)
 print(QUOTIENT)
 
-# ! Python Syntax - DATA CONVERSION
+# ! Data Conversion
 # Methods to convert a data type are as follows
 
 # EXAMPLE - converting a string to use the value in an arithmatic operation
@@ -112,7 +114,9 @@ PRODUCT = float(FLOAT_1) * float(FLOAT_2)
 BIG_STRING = "The cost of the product was £" + str(PRODUCT) + "0"
 print(BIG_STRING)
 
-# ! Strings and console output - DATA AND TIME
+# ! Strings and console output
+
+# ! DATA AND TIME
 
 # importing a library to retrieve the current date & time
 # * from datetime import datetime
@@ -877,24 +881,25 @@ print(MESSAGE)
 
 # ! Classes - Introduction
 
-# Python is object oriented programming which means it can manipulate constructs called objects
+# Python is object oriented programming which means it can manipulate objects
 # Objects are data structures that contain data and functions
 # Object functions are called methods
 
-# A class is a way of organising and producing objects with similar attributes and methods
+# A class is a way of organising & producing objects with attributes & methods
 # A way to constuct a class would be the following:
-# 1 - define your class and add the instances (data) you want to manipulate with functions inside the class
-# 2 - define your functions
-# 3 - add a variable with the data you want to assign to those instances
+# 1 - define your class and add the instances (data) you want to use
+# 2 - define your functions to use for that data
+# 3 - add a variable with the data you want to assign to those instances:
+#       weekend_car = AnotherCar('DeLorean', 'silver', 88)
 
-# ! Classes - Syntax
+# ! Syntax
 
 
 class AnimalOne(object):  # object class your class is inheriting from
     ''' syntax example '''
-    # pass = pass keyword acts as a placeholder in areas of yur code where Python expects and expression
+    # pass keyword acts as a placeholder you want to repla\ce with data
 
-# ! Classes - __init__()
+# ! __init__()
 
 
 class AnimalTwo(object):
@@ -903,7 +908,7 @@ class AnimalTwo(object):
     def __init__(self):  # initializes the objects it creates
         pass
 
-# ! Classes - Creating an object
+# ! Creating an object
 # python will always use the first parameter (self) it recieves to refer to the object
 # it's convetional to use 'self' as all programmers use this
 
@@ -913,7 +918,7 @@ class AnimalThree(object):
     def __init__(self, name):  # passing in a parameter (name)
         self.name = name  # initializing the object
 
-# ! Classes - Accessing attributes
+# ! Accessing attributes
 # dot notation is used to access
 
 
@@ -932,14 +937,14 @@ print(zebra.name)
 print(zebra.colour)
 print(zebra.is_from_africa)
 
-# ! Classes - Functions
+# ! Functions
 # Functions in classes are known as methods
 # __init__() is a method to initialize an object
 
-# ! Classes - Member variables
+# ! Member variables
 # These are variables that are available to all members of a class
 
-# ! Classes - Example of adding a customer and items
+# ! Example of adding a customer and items
 
 
 class ShoppingCart(object):
@@ -963,10 +968,10 @@ MY_CART = ShoppingCart('Paul')
 MY_CART.add_item('Tshirt', 14.95)
 
 
-# ! Classes - Inheritance!
+# ! Inheritance!
 # A class inherits the attributes & methods of another
 
-# ! Classes Overide - a means of re-creating a method
+# !a means of re-creating a method
 # Inheriting another class and overriding attributes and methods
 
 class Employee(object):
@@ -989,14 +994,14 @@ class PartTimeEmployee(Employee):
         self.hours = hours
         return hours * 12.00
 
-# ! Classes Overide - super()
+# ! super()
     # The function is used to give access to methods of a parent or sub class
     # returns an object that represents the parent class
     def full_time_wage(self, hours):
         ''' example of using super() '''
         return super(PartTimeEmployee, self).calculate_wage(hours)
 
-# ! Classes Overide - Instantiating an object
+# ! Instantiating an object
 
 
 class Triangle(object):
@@ -1020,7 +1025,8 @@ class Triangle(object):
 my_triangle = Triangle(90, 30, 60)
 print(my_triangle.number_of_sides)
 print(my_triangle.check_angles())
-# ! Classes Overide - Inheritance
+
+# ! Inheritance
 
 # Inheriting from the Triangle class and setting new values to the object
 
@@ -1035,3 +1041,66 @@ class Equilateral(Triangle):
         self.angle1 = self.angle
         self.angle2 = self.angle
         self.angle3 = self.angle
+
+
+# ! Classes - Class member variables
+# storing information about each class object
+# member variables cause they have information that belong to that class object
+
+class Car(object):
+    ''' syntax '''
+    condition = "new"  # member variable
+
+
+my_car = Car()
+print(my_car.condition)  # calling class member variable
+
+# ! Classes - Initializing a class with __init__()
+# this gets called when you create a new instance of a class
+# you override the default function by creating your own function
+# you use this if you want to include more input variables
+
+
+class NewCar(object):
+    ''' syntax '''
+    condition = "new"
+
+    def __init__(self, model, color, mpg):
+        # member variables
+        self.model = model
+        self.color = color
+        self.mpg = mpg
+
+
+# assigning values to the member variables like you would do with args & params
+my_car = NewCar('DeLorean', 'silver', 88)
+
+#  referring to a member variable for its value
+print(my_car.condition)
+print(my_car.model)
+print(my_car.color)
+print(my_car.mpg)
+
+# ! Classes - Creating Class Methods
+# remembering to use the self argument when creating a class method
+# using self allows you to use the member variables created in the base class
+
+
+class AnotherCar(object):
+    ''' syntax '''
+    condition = "brand new"
+
+    def __init__(self, model, color, mpg):
+        self.model = model
+        self.color = color
+        self.mpg = mpg
+
+    # class method or 'function'
+    def display_car(self):
+        ''' syntax example '''
+        print(f"This is a {self.color} {self.model} with {self.mpg} MPG.")
+
+
+weekend_car = AnotherCar('DeLorean', 'silver', 88)
+
+weekend_car.display_car()
