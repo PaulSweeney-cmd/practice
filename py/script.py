@@ -909,7 +909,7 @@ class AnimalTwo(object):
         pass
 
 # ! Creating an object
-# python will always use the first parameter (self) it recieves to refer to the object
+# python will always use the first parameter (self) it recieves to refer to object
 # it's convetional to use 'self' as all programmers use this
 
 
@@ -1088,12 +1088,16 @@ print(my_car.mpg)
 
 class AnotherCar(object):
     ''' syntax '''
-    condition = "brand new"
 
     def __init__(self, model, color, mpg):
         self.model = model
         self.color = color
         self.mpg = mpg
+
+    # modifying a member variable
+    def drive_car(self):
+        ''' syntax '''
+        self.conditon = 'used'
 
     # class method or 'function'
     def display_car(self):
@@ -1103,4 +1107,75 @@ class AnotherCar(object):
 
 weekend_car = AnotherCar('DeLorean', 'silver', 88)
 
-weekend_car.display_car()
+weekend_car.drive_car()
+
+# ! Classes - Overriding Methods
+# inheriting from parent class and updating member variables in new method
+# create a class and inherit parent class
+# create a method and update parent class variable
+# create variable and call method containing updated member variable
+# print variable and call member variable with dot notation
+
+# ! Classes - Building useful classes
+# One useful class method to override is the built-in __repr__() method
+# this is short for representation
+
+
+class Point3D(object):
+    ''' syntax '''
+    def __init__(self, x_num, y_num, z_num):
+        self.x_num = x_num
+        self.y_num = y_num
+        self.z_num = z_num
+
+    # providing a return value in this method
+    # tells Python how to represent an object of our class
+    def __repr__(self):
+        ''' syntax '''
+        return f"{self.x_num} {self.y_num} {self.z_num}"
+
+
+my_point = Point3D(1, 2, 3)
+print(my_point)
+
+
+# ? --------------------------------------------------------------------------
+
+# ! File INPUT/OUTPUT - open() Function
+# allows you to open a file in 'w' mode and write to that file
+
+# my_file = open("output.txt", "r")  # read mode
+# my_file = open("output.txt", "w")  # write mode
+
+# ! File INPUT/OUTPUT - writing
+
+# ?     my_list = [i ** 2 for i in range(1, 11)]
+
+# # gettng the file name to write to
+# ?     my_file = open("output.txt", "w")
+
+# # iterating through each squared number and writing the results to that file
+# ?     for i in my_list:
+# ?       my_file.write(str(i) + '\n')  \ n = new line
+
+# # always remembering to close the file when done
+# ?     my_file.close()
+# ?     print(my_list)
+
+# ! File INPUT/OUTPUT - reading
+
+# ?     my_file = open('output.txt', 'r')
+
+# ?     print(my_file.read())
+# ?     my_file.close()
+
+# ! File INPUT/OUTPUT - reading individual lines
+# using the readline() method
+
+# ?     my_file = open('text.txt', 'r')
+
+# ?     print(my_file.readline())
+# ?     print(my_file.readline())
+# ?     print(my_file.readline())
+
+# ?     my_file.close()
