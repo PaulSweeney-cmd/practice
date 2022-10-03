@@ -1179,3 +1179,16 @@ print(my_point)
 # ?     print(my_file.readline())
 
 # ?     my_file.close()
+
+# ! File INPUT/OUTPUT - automatically close files without close()
+# using with & as invokes the __exit__() method
+
+with open('file_path', encoding="w") as file:
+    file.write('success')
+
+# ! File INPUT/OUTPUT - checking a file has closed!
+
+if not file.closed:
+    file.close()
+
+print(file.closed)
