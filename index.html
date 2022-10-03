@@ -14,16 +14,35 @@
     <p>This paragraph is a child of the div element and a grandchild of the body element</p>
   </div>
 
+
+<span></span>
 <!-- good for seperating inline text for individual styling-->
-<span></span> 
-<!-- The id attribute specifies a unique id for a HTML element -->
+
 <div id="example"></div>
-<!-- The class attribute is often used to point to a class name in a style sheet -->
+<!-- The id attribute specifies a unique id for a HTML element -->
+<!-- It is also used by JavaScript to access and manipulate the element with the specific id. -->
+<!-- id attributes can be assigned to different elements in order to differentiate between them.-->
+
 <div class="example"></div>
+<!-- The class attribute is often used to point to a class name in a style sheet -->
+<!-- It can be used by multiple HTML elements -->
 
 <!-- styling tags -->
 <p>Renders text in <strong>BOLD</strong> letters</p>
 <p>Emphasises text in <em>ITALIC</em> letters</p>
+
+<img src="example" width="290" height="240" alt="image text"/>
+<!-- The alt attribute comes in handy for screen readers -->
+<!-- If an image fails to load the user can hover over the area and the alt text will explain image -->
+<!-- Alt plays a role in SEO or 'search engine optimisation' to improve the ranking of your site -->
+<!-- Alt attribute not really needed if the image information isn't particularly helpful to the user -->
+
+<video src="aVideo.mp4" width="320" height="450" controls>
+  Video not supported
+</video>
+<!-- Similar to an image file path -->
+<!-- The text between the tags would be displayed if the browser doesnt support the file -->
+<!-- The controls attribute tells the browser to include basic controls like stop, start etc-->
 
   <script src="js/scriptTwo.js"></script>
 </body>
