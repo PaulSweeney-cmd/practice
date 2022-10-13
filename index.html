@@ -76,4 +76,41 @@
 <th scope=""></th>
 
 <!-- SPANNING COLUMNS -->
-<td colspan="2">Example</td> <!-- the colspan attribute would extend the column space for the element-->
+<!-- Accepts an integer greater than or equal to 1 -->
+<td colspan="2">Example</td> <!-- the colspan attribute would extend the column space for the element -->
+
+<!-- SPANNING ROWS -->
+<!-- Accepts an integer greater than or equal to 1 -->
+<td rowspan="2"></td>
+
+<!-- TABLE BODY -->
+<!-- Suitable for sectioning off large tables of data to make them easier to read -->
+<tbody></tbody>
+
+<!-- TABLE HEADINGS -->
+<!-- Suitable for sectioning off tabel headers to structure a tabel easier to read -->
+<!-- They also require a row to con tain the tabekl headers-->
+<table>
+  <thead>
+    <tr>
+      <th>Header One</th> <!-- row or column scopes would go here on the header elements and not the heading element-->
+      <th>Header Two</th>
+      <th>Header Three</th>
+    </tr>
+  </thead>
+  <tbody> <!-- For sectioning off multiple tables for easy reading-->
+    <tr> <!-- Rows for table data cells-->
+      <td></td> 
+      <td></td>
+      <td></td> <!-- This row shows 5 cells of table data -->
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- TABLE FOOTERS -->
+<tfoot>
+  <td></td>
+  <td></td>
+</tfoot>
