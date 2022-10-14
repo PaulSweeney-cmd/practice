@@ -59,7 +59,7 @@
 
 <!------------------------------------------------------------------------------------------------------->
 
-<!-- TABLES -->
+<!--! TABLES -->
 <table>
   <!--table row element -->
   <tr>
@@ -72,26 +72,26 @@
   </tr>
 </table>
 
-<!-- scope attributes can take either 'col' or 'row' to make the heading in to a column or a row -->
+<!--? scope attributes can take either 'col' or 'row' to make the heading in to a column or a row -->
 <th scope=""></th>
 
-<!-- SPANNING COLUMNS -->
-<!-- Accepts an integer greater than or equal to 1 -->
+<!--! TABLES - SPANNING COLUMNS -->
+<!--? Accepts an integer greater than or equal to 1 -->
 <td colspan="2">Example</td> <!-- the colspan attribute would extend the column space horizontally by two -->
 
-<!-- SPANNING ROWS -->
-<!-- Accepts an integer greater than or equal to 1 -->
+<!--! TABLES - SPANNING ROWS -->
+<!--? Accepts an integer greater than or equal to 1 -->
 <td rowspan="2"></td><!-- the rowspan attribute would extend the column space vertically by two -->
 
-<!-- TABLE BODY -->
-<!-- Suitable for sectioning off large tables of data to make them easier to read -->
+<!--! TABLES - TABLE BODY -->
+<!--? Suitable for sectioning off large tables of data to make them easier to read -->
 <tbody></tbody>
 
-<!-- TABLE HEADINGS -->
+<!--! TABLES - TABLE HEADINGS -->
 
 <thead></thead>
-<!-- Suitable for sectioning off tabel headers to structure a tabel easier to read -->
-<!-- They also require a row to contain the table headers-->
+<!--? Suitable for sectioning off tabel headers to structure a tabel easier to read -->
+<!--? They also require a row to contain the table headers-->
 
 <table>
   <thead>
@@ -116,3 +116,38 @@
   <td></td>
   <td></td>
 </tfoot>
+
+
+<!--! FORMS -->
+
+<!--? Used for collecting information -->
+<!--? action attribute decides where the information is sent to -->
+<!--? method attribute is assigned a HTTP verb that's included in the HTTP request-->
+
+<!-- Sending information to example.html as a POST request-->
+<form action="/example.html" method="POST">
+  <!-- form element can accept child elements -->
+  <h1></h1>
+  <p></p>
+</form>
+
+<!--! FORMS - INPUT ELEMENTS -->
+<form action="/example.html" method="POST">
+  <input type="text" name="username" value="Davie"> <!-- the value of username now becomes 'Davie'-->
+</form>
+
+<!--! FORMS - ADDING A LABEL -->
+<!-- Explains what the input field is used for -->
+<!-- The for attribute of the <label> tag should be equal to the id attribute of the <input> element to bind them together. -->
+
+<form action="/example.html" method="POST">
+  <label for="username">Enter your username</label>
+  <input type="text" name="username" id="username">
+</form>
+
+<!--! FORMS - PASSWORD INPUT -->
+
+<form action="/example.html" method="POST">
+  <label for="user-pw">Enter your username</label>
+  <input type="password" name="user-pw" id="user-pw">
+</form>
