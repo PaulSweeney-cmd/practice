@@ -139,6 +139,7 @@
 <!--! FORMS - ADDING A LABEL -->
 <!-- Explains what the input field is used for -->
 <!-- The for attribute of the <label> tag should be equal to the id attribute of the <input> element to bind them together. -->
+<!-- Dev convention is to name the id, name and label the same thing -->
 
 <form action="/example.html" method="POST">
   <label for="username">Enter your username</label>
@@ -150,4 +151,21 @@
 <form action="/example.html" method="POST">
   <label for="user-pw">Enter your username</label>
   <input type="password" name="user-pw" id="user-pw">
+</form>
+
+<!--! FORMS - NUMBER INPUT -->
+<!-- Restricts users to typing in nunbers and special characters -->
+
+<form>
+  <label for="years"> Years of experience: </label>
+  <input id="years" name="years" type="number" step="1">  <!-- The step attribute allows the user to increase or decrease the amount-->
+</form>
+
+<!--! FORMS - RANGE INPUT -->
+<!-- The range attrbute allows the user to move the slider to increase or decrease the value of the input by one -->
+<!-- The step for a sider cna be adjusted to make it more smooth for small steps and more noticelable for larger step values -->
+
+<form>
+  <label for="volume"> Volume Control</label>
+  <input id="volume" name="volume" type="range" min="0" max="100" step="1">
 </form>
