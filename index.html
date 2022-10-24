@@ -225,3 +225,32 @@
 <section class="submission">
   <input type="submit" style="cursor: pointer">
 </section>
+
+<!--! FORM VALIDATION -->
+
+<!-- Using the 'required' attribute tells the user that this field must be filled in -->
+<!-- Client-side validations happen in the browser before information is sent to a server -->
+<!-- It also helps give users immediate feedback on what they need to fix instead of having to wait for a server to send back that information -->
+
+<input type="number" name="guess" id="guess" required>
+
+<!--! FORM VALIDATION - SETTING A MINIMUM AND MAXIMUM CHARACTER FIELD -->
+<!-- If the input is a number this would man minumum and maximum numbers -->
+
+<!-- Number inputs -->
+<input type="number" name="guess" id="guess" min="1" max="10" required>
+
+<!-- Character inputs -->
+<input id="username" name="username" type="text" minlength="3" maxlength="15" required>
+
+<!--! FORM VALIDATION - PATTERNS -->
+<!-- Pattern attribute -->
+<!-- By using regular expressions (Regex), Regular expressions are a sequence of characters that make up a search pattern -->
+<!-- Assigning a regex to pattern matches the input to the provided regex -->
+
+<input id="username" name="username" type="text" minlength="3" maxlength="15" pattern="[a-zA-Z0-9]{14,16}" required>
+<!-- [a-zA-Z0-9] = denote a class that contains lowercase, Uppercase and digits 0 to 9 -->
+<!-- {14,16} = denote a character count minumim of 14 and maximum of 16 -->
+
+
+
