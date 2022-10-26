@@ -162,8 +162,8 @@
 </section>
 
 <!--! FORMS - RANGE INPUT -->
-<!-- The range attrbute allows the user to move the slider to increase or decrease the value of the input by one -->
-<!-- The step for a sider cna be adjusted to make it more smooth for small steps and more noticelable for larger step values -->
+<!--? The range attrbute allows the user to move the slider to increase or decrease the value of the input by one -->
+<!--? The step for a sider cna be adjusted to make it more smooth for small steps and more noticelable for larger step values -->
 
 <section>
   <label for="volume"> Volume Control </label>
@@ -196,9 +196,9 @@
 </section>
 
 <!--! FORMS - DATALIST INPUT -->
-<!-- Similar to a drop down list -->
-<!-- The <datalist> is used with an <input type="text"> element -->
-<!-- The <input> creates a text field that users can type into and filter options from the <datalist> -->
+<!--? Similar to a drop down list -->
+<!--? The <datalist> is used with an <input type="text"> element -->
+<!--? The <input> creates a text field that users can type into and filter options from the <datalist> -->
 
 <section class="sauce-selection">
   <label for="sauce">What type of sauce would you like?</label>
@@ -228,9 +228,9 @@
 
 <!--! FORM VALIDATION -->
 
-<!-- Using the 'required' attribute tells the user that this field must be filled in -->
-<!-- Client-side validations happen in the browser before information is sent to a server -->
-<!-- It also helps give users immediate feedback on what they need to fix instead of having to wait for a server to send back that information -->
+<!--? Using the 'required' attribute tells the user that this field must be filled in -->
+<!--? Client-side validations happen in the browser before information is sent to a server -->
+<!--? It also helps give users immediate feedback on what they need to fix instead of having to wait for a server to send back that information -->
 
 <input type="number" name="guess" id="guess" required>
 
@@ -245,12 +245,72 @@
 
 <!--! FORM VALIDATION - PATTERNS -->
 <!-- Pattern attribute -->
-<!-- By using regular expressions (Regex), Regular expressions are a sequence of characters that make up a search pattern -->
-<!-- Assigning a regex to pattern matches the input to the provided regex -->
+<!--? By using regular expressions (Regex), Regular expressions are a sequence of characters that make up a search pattern -->
+<!--? Assigning a regex to pattern matches the input to the provided regex -->
 
 <input id="username" name="username" type="text" minlength="3" maxlength="15" pattern="[a-zA-Z0-9]{14,16}" required>
 <!-- [a-zA-Z0-9] = denote a class that contains lowercase, Uppercase and digits 0 to 9 -->
 <!-- {14,16} = denote a character count minumim of 14 and maximum of 16 -->
+
+<!--! SEMANTIC HTML -->
+
+<!--? Using html elements specific to their meaning -->
+<!--? Specifically named elements related to what they're being used for like <nav> <header> etc -->
+<!--? Good for accessibility for screen readers & browswers in mobile devices -->
+<!--? SEO or 'search engine optimisation', search engines are better able to identify the content of your website and weight the most important content appropriately -->
+<!--? It makes your code easier to uderstand by other developers -->
+<!--? Non-semantic HTML elements should be used when there are no semantic elements that can do the job -->
+
+<html>
+  <body>
+    <header>  <!--  Header is used here to contain nav links as nav links are usually at the top of a page as is a header -->
+      <h1>SEMANTIC HTML STRUCTURE
+      </h1>
+      <nav>
+        <ul>
+          <li></li>
+          <li></li>
+        </ul>
+      </nav>
+    </header>
+  </body>
+</html>
+
+
+<!--! SEMANTIC HTML - MAIN & FOOTER -->
+<!--? <main> = used to encapsulate the dominant content, this is used so the web browsers and screen readers identify that information better rather than using a <div> -->
+<!--? <footer> = contains any sub informtion you wish to show at the bottom of the web page -->
+
+<main>
+  <section>
+    <article>
+      <h1>
+        <p>
+          SEMANTIC STRUCTURE EXAMPLE
+        </p>
+      </h1>
+    </article>
+  </section>
+</main>
+<footer>
+  <p>
+    FOOTER CONTENT
+  </p>
+</footer>
+
+<!--! SEMANTIC HTML - ARTICLE & SECTION -->
+<!--? <section> = defines elements in a document such as chapters, headings, or any other area of the document with the same theme -->
+<!--? <article> element holds content that makes sense on its own. <article> can hold content such as articles, blogs, comments, magazines, etc. 
+<!--? An <article> tag would help someone using a screen reader understand where the article content (that might contain a combination of text, images, audio, etc.) begins and ends -->
+
+<section>
+  <article>
+    <h1>Article Title</h1>
+    <p>
+      Article details
+    </p>
+  </article>
+</section>
 
 
 
