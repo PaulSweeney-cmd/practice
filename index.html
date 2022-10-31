@@ -278,7 +278,7 @@
 
 
 <!--! SEMANTIC HTML - MAIN & FOOTER -->
-<!--? <main> = used to encapsulate the dominant content, this is used so the web browsers and screen readers identify that information better rather than using a <div> -->
+<!--? <main> = used to encapsulate the dominant content, this is used so the web browsers and screen readers identify that information better than using a <div> -->
 <!--? <footer> = contains any sub informtion you wish to show at the bottom of the web page -->
 
 <main>
@@ -312,5 +312,38 @@
   </article>
 </section>
 
+<!--! SEMANTIC HTML - ASIDE ELEMENT -->
+<!--? Used for enhancing information in an article but not needed neccessarily to understand that information -->
+<!--? Can be used for comments, additional information and endnotes -->
 
+<section>
+  <article>
+    <p>MAIN INFORMATION</p>
+  </article>
+  <aside>
+    <p>ADDITIONAL INFORMATON</p>
+  </aside>
+</section>
 
+<!--! SEMANTIC HTML - FIGURE AND FIGCAPTION -->
+<!--? Figure is used to encapsulate a media file -->
+<!--? Figcaption is uxsed to describe the image -->
+<figure>
+  <img src="./file-name" alt="file-photo-text">
+  <figcaption>IMAGE DESCRIPTION</figcaption>
+</figure>
+
+<!--! SEMANTIC HTML - AUDIO AND ATTRIBUTES -->
+<!--? The audio attribute works the same as an image source, the type attribute helps the browser identify it more easily ans whther the audio file is supported by the browser -->
+
+<audio autoplay controls>  <!-- by adding autoplay and controls we give the user the basic controls for audio and autoplay used to play media file automatically on open of page -->
+  <source src="./audio-file" type="audio/mp3">  <!-- audio source used wih this attribute instead of audio attribute -->
+</audio>
+
+<!--! SEMANTIC HTML - VIDEO AND EMBED -->
+
+<video src="https://content.codecademy.com/courses/SemanticHTML/dog-video.mp4" controls>
+  Video not supported
+</video>
+<!-- Embed embeds a media file from an external source -->
+<embed src="https://content.codecademy.com/courses/SemanticHTML/dog-on-beach.gif">
