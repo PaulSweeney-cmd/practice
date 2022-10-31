@@ -1,58 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- the head tag contains all metadata for the document, the metadata is information about the html page that isnt displayed in the web browser -->
-  <head>
-    <link href='http://fonts.googleapis.com/css?family=Quicksand:300' rel='stylesheet'type='text/css'>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/styles.css">
-    <!-- Titles dont appear on the web page, they appear in the site title in the browser tab -->
-    <title>Learning HTML</title>
-  </head> 
+<!-- the head tag contains all metadata for the document, the metadata is information about the html page that isnt displayed in the web browser -->
+
+<head>
+  <link href='http://fonts.googleapis.com/css?family=Quicksand:300' rel='stylesheet' type='text/css'>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Titles dont appear on the web page, they appear in the site title in the browser tab -->
+  <title>Learning HTML</title>
+  <!--? Internal style sheets in a html file belong in the head element -->
+    <style>
+      p {
+        color: green;
+        font-size: 22px;
+      }
+    </style>
+</head>
+
 <body>
   <h1>Hello World</h1>
-    <p>
-      This paragraph is a child of the body element and a sibling of the h1 element
-    </p>
+  <p>
+    This paragraph is a child of the body element and a sibling of the h1 element
+  </p>
   <div>
-  <!-- divs (page dividers) are good for styling groups of elements between those tags -->
+    <!-- divs (page dividers) are good for styling groups of elements between those tags -->
     <p>This paragraph is a child of the div element and a grandchild of the body element</p>
   </div>
 
-<a href="" target="_blank"></a>
-<!-- The anchor tag contains a link to another web page -->
-<!-- It can also contain relative paths to local files -->
-<!-- The target attribute specifies how a link should open, _blank specifies the link should open in a new window -->
-<!-- It can also be used to wrap an image -->
+  <a href="" target="_blank"></a>
+  <!-- The anchor tag contains a link to another web page -->
+  <!-- It can also contain relative paths to local files -->
+  <!-- The target attribute specifies how a link should open, _blank specifies the link should open in a new window -->
+  <!-- It can also be used to wrap an image -->
 
-<span></span>
-<!-- good for seperating inline text for individual styling-->
+  <span></span>
+  <!-- good for seperating inline text for individual styling-->
 
-<div id="example"></div>
-<!-- The id attribute specifies a unique id for a HTML element -->
-<!-- It is also used by JavaScript to access and manipulate the element with the specific id. -->
-<!-- id attributes can be assigned to different elements in order to differentiate between them.-->
+  <div id="example"></div>
+  <!-- The id attribute specifies a unique id for a HTML element -->
+  <!-- It is also used by JavaScript to access and manipulate the element with the specific id. -->
+  <!-- id attributes can be assigned to different elements in order to differentiate between them.-->
 
-<div class="example"></div>
-<!-- The class attribute is often used to point to a class name in a style sheet -->
-<!-- It can be used by multiple HTML elements -->
+  <div class="example"></div>
+  <!-- The class attribute is often used to point to a class name in a style sheet -->
+  <!-- It can be used by multiple HTML elements -->
 
-<!-- styling tags -->
-<p>Renders text in <strong>BOLD</strong> letters</p>
-<p>Emphasises text in <em>ITALIC</em> letters</p>
+  <!-- styling tags -->
+  <p>Renders text in <strong>BOLD</strong> letters</p>
+  <p>Emphasises text in <em>ITALIC</em> letters</p>
 
-<img src="example" width="290" height="240" alt="image text"/>
-<!-- The alt attribute comes in handy for screen readers -->
-<!-- If an image fails to load the user can hover over the area and the alt text will explain image -->
-<!-- Alt plays a role in SEO or 'search engine optimisation' to improve the ranking of your site -->
-<!-- Alt attribute not really needed if the image information isn't particularly helpful to the user -->
+  <img src="example" width="290" height="240" alt="image text" />
+  <!-- The alt attribute comes in handy for screen readers -->
+  <!-- If an image fails to load the user can hover over the area and the alt text will explain image -->
+  <!-- Alt plays a role in SEO or 'search engine optimisation' to improve the ranking of your site -->
+  <!-- Alt attribute not really needed if the image information isn't particularly helpful to the user -->
 
-<video src="aVideo.mp4" width="320" height="450" controls>
-  Video not supported
-</video>
-<!-- Similar to an image file path -->
-<!-- The text between the tags would be displayed if the browser doesnt support the file -->
-<!-- The controls attribute tells the browser to include basic controls like stop, start etc-->
+  <video src="aVideo.mp4" width="320" height="450" controls>
+    Video not supported
+  </video>
+  <!-- Similar to an image file path -->
+  <!-- The text between the tags would be displayed if the browser doesnt support the file -->
+  <!-- The controls attribute tells the browser to include basic controls like stop, start etc-->
 
   <script src="js/scriptTwo.js"></script>
 </body>
@@ -101,9 +114,11 @@
       <th>Header Three</th>
     </tr>
   </thead>
-  <tbody> <!-- For sectioning off multiple tables for easy reading-->
-    <tr> <!-- Rows for table data cells-->
-      <td></td> 
+  <tbody>
+    <!-- For sectioning off multiple tables for easy reading-->
+    <tr>
+      <!-- Rows for table data cells-->
+      <td></td>
       <td></td>
       <td></td> <!-- This row shows 5 cells of table data -->
       <td></td>
@@ -158,7 +173,8 @@
 
 <section>
   <label for="years"> Years of experience: </label>
-  <input id="years" name="years" type="number" step="1">  <!-- The step attribute allows the user to increase or decrease the amount-->
+  <input id="years" name="years" type="number" step="1">
+  <!-- The step attribute allows the user to increase or decrease the amount-->
 </section>
 
 <!--! FORMS - RANGE INPUT -->
@@ -187,7 +203,7 @@
 <!--! FORMS - DROP DOWN -->
 <!-- Select element needs to be included for the drop down -->
 <section>
-  <label for="bun">What type of bun would you like?</label>  <!-- Remembering for and id have to be the same value-->
+  <label for="bun">What type of bun would you like?</label> <!-- Remembering for and id have to be the same value-->
   <select name="bun" id="bun">
     <option value="sesame">Sesame</option>
     <option value="potato">Potato</option>
@@ -262,18 +278,20 @@
 <!--? Non-semantic HTML elements should be used when there are no semantic elements that can do the job -->
 
 <html>
-  <body>
-    <header>
-      <!--  Header is used here to contain nav links as nav links are usually at the top of a page as is a header -->
-      <h1>SEMANTIC HTML STRUCTURE</h1>
-      <nav>
-        <ul>
-          <li></li>
-          <li></li>
-        </ul>
-      </nav>
-    </header>
-  </body>
+
+<body>
+  <header>
+    <!--  Header is used here to contain nav links as nav links are usually at the top of a page as is a header -->
+    <h1>SEMANTIC HTML STRUCTURE</h1>
+    <nav>
+      <ul>
+        <li></li>
+        <li></li>
+      </ul>
+    </nav>
+  </header>
+</body>
+
 </html>
 
 
@@ -336,8 +354,9 @@
 <!--! SEMANTIC HTML - AUDIO AND ATTRIBUTES -->
 <!--? The audio attribute works the same as an image source, the type attribute helps the browser identify it more easily ans whther the audio file is supported by the browser -->
 
-<audio autoplay controls>  <!-- by adding autoplay and controls we give the user the basic controls for audio and autoplay used to play media file automatically on open of page -->
-  <source src="./audio-file" type="audio/mp3">  <!-- audio source used wih this attribute instead of audio attribute -->
+<audio autoplay controls>
+  <!-- by adding autoplay and controls we give the user the basic controls for audio and autoplay used to play media file automatically on open of page -->
+  <source src="./audio-file" type="audio/mp3"> <!-- audio source used wih this attribute instead of audio attribute -->
 </audio>
 
 <!--! SEMANTIC HTML - VIDEO AND EMBED -->
