@@ -1,0 +1,47 @@
+/*! CSS SELECTORS - TYPE */
+/*? A type selector is selecting an element of a given type */
+
+p {
+  color: aliceblue;
+}
+
+/*! CSS SELECTORS - UNIVERSAL SELECTOR */
+/*? This selects ALL elements of any type */
+
+* {
+  font-size: 55px;
+}
+
+/*! CSS SELECTORS - CLASS ATTRIBUTE */
+/*? period (.) used to target class name from the html file */
+/*? Classes can be used multiple times throughout an HTML document */
+
+.example-class {
+  color: aliceblue;
+}
+
+/*! CSS SELECTORS - ID ATTRIBUTE */
+/*? Often used to style an element uniquely */
+/*? An ID can only be used once per page */
+
+#example-id {
+  color: aqua;
+}
+
+/*? ID's and classes can be used to target a html element */
+/* <h1 class='green bold' id='an-id'></h1> */
+
+
+/*! CSS SELECTORS - MULTIPLE CLASSES */
+/*? using two classes with two styles for one html element */
+
+/*? HTML */
+/* <h1 class='green bold'></h1> */
+
+/*? CSS */
+.green {
+  color: green;
+}
+.bold {
+  font-weight: bold;
+}
