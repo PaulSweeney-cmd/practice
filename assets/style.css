@@ -16,6 +16,8 @@ p {
 /*? period (.) used to target class name from the html file */
 /*? Classes can be used multiple times throughout an HTML document */
 
+/* <h1 class='example-class'></h1> */
+
 .example-class {
   color: aliceblue;
 }
@@ -23,6 +25,8 @@ p {
 /*! CSS SELECTORS - ID ATTRIBUTE */
 /*? Often used to style an element uniquely */
 /*? An ID can only be used once per page */
+
+/* <h1 id='example-id'></h1> */
 
 #example-id {
   color: aqua;
