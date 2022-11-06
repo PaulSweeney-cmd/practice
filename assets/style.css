@@ -13,7 +13,6 @@ p {
 }
 
 /*! CSS SELECTORS - CLASS ATTRIBUTE */
-/*? period (.) used to target class name from the html file */
 /*? Classes can be used multiple times throughout an HTML document */
 
 /* <h1 class='example-class'></h1> */
@@ -49,3 +48,63 @@ p {
 .bold {
   font-weight: bold;
 }
+
+/*! CSS SELECTORS - ATTRIBUTES */
+/*? Attributes are used by html elements to add extra detai or functinality */
+/*? HTML elements with attributes: */
+  /* 
+    <img src="" alt="">
+    <video src=""></video>
+    <a href=""></a>
+    <p style=""></p>
+    <html lang="en-US"></html>
+    <p class=""></p>
+    <p id=""></p> 
+  */
+
+/*! CSS SELECTORS - ATTRIBUTE SELECTOR [] */
+/*? These are used to target a html element that already contains an attribute */
+/*? Can be used to apply styling to those contained attributes: */
+/*? No new html markup with an ID or class needs to be created to target a html element
+
+  /*? targeting all href attributes: */
+  /* <a href=""></a> */
+
+  a[href]{
+    color: aquamarine;
+  }
+
+  /*? selecting an element where the attribute contains an instance of a specified value: */
+  /* <img src='/images/seasons/cold/winter.jpg'> */
+
+  img[src*='winter']{
+    height: 50px;
+  }
+
+/*! CSS SELECTORS - PSUEDO CLASSES */
+
+/* hovering over a paragraph on a web page */
+p:hover {
+  color: blue;
+}
+
+/* clicking on an input box to show a blue border: */
+input:focus {
+  border-color: aqua;
+}
+
+/* clicking on a link to open a web page, this link the  becomes purple: */
+a:visited {
+  color: purple;
+}
+
+/* filling a form out the submit button stays gray until al fields have been filled out  */
+button:disabled {
+  color: gray;
+}
+
+/* targeting an instance in a link to make that link only highlight*/
+a[href*='example']:hover {
+  color: blueviolet;
+}
+
