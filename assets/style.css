@@ -108,3 +108,37 @@ a[href*='example']:hover {
   color: blueviolet;
 }
 
+/*! CSS SELECTORS - SPECIFICITY */
+/*? Specificity is the order by which the browser decides which CSS styles will be displayed */
+/*? IDs are the most specific selector in CSS, followed by classes, and finally, type */
+/*? Type = element you're targeting like h1, h2, p etc. */
+/* To make styles easy to edit, it’s best to style with a type selector, if possible. If not, add a class selector. 
+If that is not specific enough, then consider using an ID selector. */
+
+                                        /* EXAMPLE: */            
+/*? ID selector styling would overthrow all other styling for a element as an ID is the most specific selector */
+  /* <h5 class='author-class' id='author-id'></h5> */
+
+/*! CSS SELECTORS - CHAINING: The combination of multiple selectors*/
+
+/* This chain only targets the h1 element with a class of 'multiple' */
+h1.multiple {
+  color: aqua;
+}
+
+/*! CSS SELECTORS - DESCENDANT COMBINATOR */
+/*? Suitable for selecting elements that are nested */
+
+/* Below is a div with class name of 'description', inside this div is a h5 element */
+  /* 
+    <div class="description">
+      <h5></h5>
+    </div> 
+  */
+
+/* using the descendant combinator to style the h5 element within the div with that class name only */
+  .description h5 {
+    color: blueviolet;
+  }
+
+  
