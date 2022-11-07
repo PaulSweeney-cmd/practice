@@ -112,6 +112,8 @@ a[href*='example']:hover {
 /*? Specificity is the order by which the browser decides which CSS styles will be displayed */
 /*? IDs are the most specific selector in CSS, followed by classes, and finally, type */
 /*? Type = element you're targeting like h1, h2, p etc. */
+/*? Adding more specificity to a type will override using just a standard type */
+
 /* To make styles easy to edit, it’s best to style with a type selector, if possible. If not, add a class selector. 
 If that is not specific enough, then consider using an ID selector. */
 
@@ -141,4 +143,23 @@ h1.multiple {
     color: blueviolet;
   }
 
-  
+/*! CSS SELECTORS - MULTIPLE SELECTORS */
+/* Avoids repetative code */
+/* Useful for targeting multiple selectors that have the exact same styling */
+                                        /* Before */
+h1 {
+  font-family: Georgia;
+}
+.menu {
+  font-family: Georgia;
+}
+
+                                        /* After */
+h1,
+.menu {
+  font-family: Georgia;
+}
+
+/** -------------------------------------------------------------------------------------------------------------------- **/
+
+/*! CSS VISUAL RULES */
