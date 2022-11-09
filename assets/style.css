@@ -67,7 +67,7 @@ p {
 /*? Can be used to apply styling to those contained attributes: */
 /*? No new html markup with an ID or class needs to be created to target a html element
 
-  /*? targeting all href attributes: */
+  /*? targeting ALL href attributes: */
   /* <a href=""></a> */
 
   a[href]{
@@ -103,7 +103,7 @@ button:disabled {
   color: gray;
 }
 
-/* targeting an instance in a link to make that link only highlight*/
+/* targeting an instance in a link to make that link only highlight */
 a[href*='example']:hover {
   color: blueviolet;
 }
@@ -162,4 +162,35 @@ h1,
 
 /** -------------------------------------------------------------------------------------------------------------------- **/
 
-/*! CSS VISUAL RULES */
+/*! CSS BOX MODEL */
+/*
+- Box model is a concept on how elements are positioned 
+- Browsers load HTML elements with default position values. This can cause issues to the user experience. 
+*/
+
+/* 
+- width and height: The width and height of the content area
+- padding: The amount of space between the content area and the border.
+- border: The thickness and style of the border surrounding the content area and padding.
+- margin: The amount of space between the border and the outside edge of the element. 
+*/
+
+/*! CSS BOX MODEL - PIXELS */
+/* 
+- Pixels allow you to set the exact size of an element’s box (width and height). 
+- When the width and height of an element are set in pixels, it will be the same size on all devices — an element that fills a laptop screen will overflow a mobile screen. 
+*/
+
+/*! CSS BOX MODEL - BORDER */
+/* 
+- A border is a line that surrounds an element, like a frame around a painting. 
+- Borders can be set with a specific width, style, and color 
+*/
+
+/*! CSS BOX MODEL - PADDING */
+/* 
+- The space between the contents of a box and the borders of a box is known as padding. Padding is like the space between a picture and the frame surrounding it.
+- The padding property is often used to expand the background color and make the content look less cramped.
+- You can be more specific with padding by specifying top, right, bottom and left to target.
+*/
+
