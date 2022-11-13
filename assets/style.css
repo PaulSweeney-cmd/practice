@@ -203,8 +203,7 @@ h1,
 /*! MARGIN - AUTO:
 - This will center the div in its containing element, 0 sets the top and bottom margins to zero
 - The auto value tells the browser to adjust the left and right margins until centered
-- In order to center an element, a width must be set for that element. Otherwise, 
-  the width of the div will be automatically set to the full width of its containing element
+- In order to center an element, a width must be set for that element. Otherwise, the width of the div will be automatically set to the full width of its containing element
 */
 div.headline {
   width: 400px; /* the width of the div is set to 400 pixels, which is less than the width of most screens. This will cause the div to center within a containing element that is greater than 400 pixels wide. */
