@@ -267,4 +267,27 @@ h1,
     display: none; /* Completely removes an element in the browser */
   }
 
+/*! CSS BOX MODEL: CHANGING THE BOX MODEL - CONTENT BOX */
+
+div.box {
+  box-sizing: content-box; /* Default value box model used by the brower */
+}
+
+/*! CSS BOX MODEL: CHANGING THE BOX MODEL - BORDER BOX */
+/* 
+- The new box model simply makes sure that the dimensions of elements remains the same regardless of border width and padding.
+- The box-sizing property controls the box model used by the browser.
+- The border-box model is not affected by border thickness or padding.
+*/
+  * {
+    box-sizing: border-box; /* Resets the default value for all html box models */
+  }
+
+  h1 {
+    border: 1px solid black;
+    height: 200px;
+    width: 300px;
+    padding: 10px;
+  }
+
 /** -------------------------------------------------------------------------------------------------------------------- **/
