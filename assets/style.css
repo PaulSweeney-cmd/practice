@@ -192,11 +192,18 @@ h1,
 - The space between the contents of a box and the borders of a box is known as padding. Padding is like the space between a picture and the frame surrounding it.
 - The padding property is often used to expand the background color and make the content look less cramped.
 - You can be more specific with padding by specifying top, right, bottom and left to target.
+- Shorthand padding consists of setting up padding on a single line:
+
+    div.headline {
+      color: aqua;
+      padding: 20px 30px; 20px for top and bottom, 30px for right and left
+    }
+
 */
 
 /*! CSS BOX MODEL - MARGIN */
 /* 
-- Margin refers to the space directly outside of the box. 
+- Margin refers to the space directly outside of the elements box. 
 - The margin property is used to specify the size of this space.
 */
 
@@ -205,7 +212,59 @@ h1,
   - The auto value tells the browser to adjust the left and right margins until centered
   - In order to center an element, a width must be set for that element. Otherwise, the width of the div will be automatically set to the full width of its containing element
   */
+
   div.headline {
     width: 400px; /* the width of the div is set to 400 pixels, which is less than the width of most screens. This will cause the div to center within a containing element that is greater than 400 pixels wide. */
     margin: 0 auto; /* sets the top and botom margins to 0 and left and right to auto to center the div within a containing element that is bigger than 400px */
   }
+
+  /*! MARGIN - VERTICAL COLLAPSE
+  - Vertical margins collapse which means the element with the greater vertical margin will ovveride the element without
+  - Horizontal margins will always be displayed and added together and wont collapse.
+
+/*! CSS BOX MODEL - MINIMUM AND MAXIMUM WIDTH AND HEIGHT */
+/* 
+- Commonly used for screens of different sizes
+- min-width: minimum width of an element’s box.
+- max-width: maximum width of an element’s box.
+- min-height: minimum height of an element’s box.
+- max-height: maximum height of an element’s box.
+*/
+
+  p {
+    min-width: 300px; /* paragraphs will not shrink below 300px inside of an elements box */
+    max-width: 600px; /* paragraphs will not exceed above 600px inside of an elements box */
+  }
+
+/*! CSS BOX MODEL - OVERFLOW */
+
+  p {
+    overflow: hidden; /* Hidden is set if the content overflows its box, this stops content from overlapping */
+    overflow: scroll; /* Scroll is set for content to scroll if it doesnt fill the elements box in a certain screen size. */
+  }
+
+/*! CSS BOX MODEL - RESETTING DEFAULTS */
+/* 
+- User agent (or browser) instills default settings for html elememnts in the abscence of an external style sheet
+- Resetting therse default settings should eb the first rule in CSS styling, this allows the developer to work with their own styles 
+*/
+
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+/*! CSS BOX MODEL - VISIBILITY */
+/* 
+- Alows an element to be hidden or displayed in the browser
+- These elements will still be displayed in the source code though 
+*/
+
+  p {
+    visibility: collapse; /* Collapses an element in the browser */
+    visibility: visible; /* Displays an element in the browser */
+    visibility: hidden; /* Hides an element in the browser. The page won't adjust, it will still leave an empty space where the element is intended to display.*/
+    display: none; /* Completely removes an element in the browser */
+  }
+
+/** -------------------------------------------------------------------------------------------------------------------- **/
