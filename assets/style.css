@@ -292,12 +292,12 @@ div.box {
 
 /** -------------------------------------------------------------------------------------------------------------------- **/
 
-/*! DISPLAYING AND POSITIONING - FLOW OF HTML */
+/*! DISPLAY AND POSITIONING - FLOW OF HTML */
 /* 
 A browser will render the elements of an HTML document that has no CSS from left to right, top to bottom, in the same order as they exist in the document. This is called the flow of elements in HTML. 
 */
 
-/*! DISPLAYING AND POSITIONING - POSITION */
+/*! DISPLAY AND POSITIONING - POSITION */
 /* 
 The default position of an element can be changed by setting its position property. The position property can take one of five values:
   - static:  The default value (it does not need to be specified)
@@ -307,7 +307,7 @@ The default position of an element can be changed by setting its position proper
   - sticky
 */
 
-/*! DISPLAYING AND POSITIONING - POSITION: RELATIVE */
+/*! DISPLAY AND POSITIONING - POSITION: RELATIVE */
 /* 
 - This value allows you to position an element relative to its default static position on the web page.
 */
@@ -320,14 +320,14 @@ The default position of an element can be changed by setting its position proper
     left: 120px; /* Moves the element away from the left by 120px */
   }
 
-/*! DISPLAYING AND POSITIONING - POSITION: ABSOLUTE */
+/*! DISPLAY AND POSITIONING - POSITION: ABSOLUTE */
 /*
 - Removed from the document flow. When a user scrolls, this element will stay at it's offset position.
 - When an element’s position is set to absolute, all other elements on the page will ignore the element and act like it is not present on the page.
 - The element will be positioned relative to its closest positioned parent element, while offset properties can be used to determine the final position from there. 
 */
 
-/*! DISPLAYING AND POSITIONING - POSITION: FIXED */
+/*! DISPLAY AND POSITIONING - POSITION: FIXED */
 /*
 - Removed from the document flow. When a user scrolls, this element will stay at it's offset position.
 - Fixes and element in place when a user is scrolling down or up the page
@@ -341,7 +341,7 @@ The default position of an element can be changed by setting its position proper
     left: 0px;
   }
 
-/*! DISPLAYING AND POSITIONING - POSITION: STICKY */
+/*! DISPLAY AND POSITIONING - POSITION: STICKY */
 /* 
 The sticky value is another position value that keeps an element in the document flow as the user scrolls, but sticks to a specified position as the page is scrolled further. 
 */
