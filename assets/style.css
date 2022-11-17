@@ -232,8 +232,8 @@ h1,
 */
 
   p {
-    min-width: 300px; /* paragraphs will not shrink below 300px inside of an elements box */
-    max-width: 600px; /* paragraphs will not exceed above 600px inside of an elements box */
+    min-width: 300px; /* paragraphs will not shrink below 300px */
+    max-width: 600px; /* paragraphs will not exceed above 600px */
   }
 
 /*! CSS BOX MODEL - OVERFLOW */
@@ -246,7 +246,7 @@ h1,
 /*! CSS BOX MODEL - RESETTING DEFAULTS */
 /* 
 - User agent (or browser) instills default settings for html elememnts in the abscence of an external style sheet
-- Resetting therse default settings should eb the first rule in CSS styling, this allows the developer to work with their own styles 
+- Resetting therse default settings should be the first rule in CSS styling, this allows the developer to work with their own styles 
 */
 
   body {
@@ -352,3 +352,13 @@ The sticky value is another position value that keeps an element in the document
     position: sticky;
     top: 240px; /* When a user scrolls down and the div reaches 240px from the top this will stick at its relative position until it reaches the bottom of the page */
   }
+
+/** -------------------------------------------------------------------------------------------------------------------- **/
+
+/*! DISLAY AND POSITIONING - Z INDEX */
+/* 
+- Z index positions content properly if they overlap
+- The z-index property controls how far back or how far forward an element should appear on the web page when elements overlap.
+- Often though of as "depth elements"
+- Accept integers to tell the browser how what order they should be displayed in
+*/
