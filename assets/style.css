@@ -501,7 +501,7 @@ div.special {
   color: hsl(120, 60%, 70%);  /* first value is measured in degrees on the colour wheel, the other two are 60% saturation and 70% lightness */
 }
 
-/*! CSS COLOR - OPACITY AND ALPHA */
+/*! CSS COLOR - ALPHA (OPACITY) */
 /* 
 Using alpha (opacity) with a hsl element
 */
