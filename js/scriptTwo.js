@@ -51,7 +51,8 @@ console.log(produceStringInt());
 //! Demonstrate a basic conditional statement
 // you can't re-assign a value to a variable in it's block scope, the result would be no output
 // if/else statements
-// logical operators: > < >= <= !== ===
+// Comparison operators: > < >= <= !== ===
+// Logical operators: || && !
 // && to check two conditions both of which should be true
 // || OR OPERATOR, ! NOT (OR BANG) OPERATOR to check that one or the other condition must evaluate to true
 
@@ -391,7 +392,7 @@ console.log(retArr);
 //   console.log(count);
 // }
 
-// // backwards for loop
+// backwards for loop
 // for(let count = 10; count >= 0; count--){
 //   console.log(count);
 // }
